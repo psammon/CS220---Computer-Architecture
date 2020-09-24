@@ -1,0 +1,344 @@
+Script started on 2020-09-17 12:13:47-04:00 [TERM="xterm" TTY="/dev/pts/0" COLUMNS="93" LINES="49"]
+psammon1@remote05:~/i220a/submit/lab3$ cd excerises
+bash: cd: excerises: No such file or directory
+psammon1@remote05:~/i220a/submit/lab3$ ls
+exercises  lab3.LOG
+psammon1@remote05:~/i220a/submit/lab3$ lscd excerises[C/excerises
+bash: cd: /excerises: No such file or directory
+psammon1@remote05:~/i220a/submit/lab3$ cd /excerises~/excerises
+bash: cd: /home/psammon1/excerises: No such file or directory
+psammon1@remote05:~/i220a/submit/lab3$ cd ~/excerises=/excerises[1P/excerises[1P/excerises[C/excerisesl/excerisesa/excerisesb/excerises3/excerises
+bash: cd: /lab3/excerises: No such file or directory
+psammon1@remote05:~/i220a/submit/lab3$ cd /lab3/excerises/
+bash: cd: /lab3/excerises/: No such file or directory
+psammon1@remote05:~/i220a/submit/lab3$ cd /lab3/excerises/[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kmkdir dr[Kr[Kir
+psammon1@remote05:~/i220a/submit/lab3$ ls
+dir  exercises	lab3.LOG
+psammon1@remote05:~/i220a/submit/lab3$ rm dir
+rm: cannot remove 'dir': Is a directory
+psammon1@remote05:~/i220a/submit/lab3$ ddel[K[K[Kel di
+bash: del: command not found
+psammon1@remote05:~/i220a/submit/lab3$ git
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone             Clone a repository into a new directory
+   init              Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add               Add file contents to the index
+   mv                Move or rename a file, a directory, or a symlink
+   restore           Restore working tree files
+   rm                Remove files from the working tree and from the index
+   sparse-checkout   Initialize and modify the sparse-checkout
+
+examine the history and state (see also: git help revisions)
+   bisect            Use binary search to find the commit that introduced a bug
+   diff              Show changes between commits, commit and working tree, etc
+   grep              Print lines matching a pattern
+   log               Show commit logs
+   show              Show various types of objects
+   status            Show the working tree status
+
+grow, mark and tweak your common history
+   branch            List, create, or delete branches
+   commit            Record changes to the repository
+   merge             Join two or more development histories together
+   rebase            Reapply commits on top of another base tip
+   reset             Reset current HEAD to the specified state
+   switch            Switch branches
+   tag               Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch             Download objects and refs from another repository
+   pull              Fetch from and integrate with another repository or a local branch
+   push              Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
+psammon1@remote05:~/i220a/submit/lab3$ rm [Kdir dir
+psammon1@remote05:~/i220a/submit/lab3$ cd rmdir dir[6Pgitdel dirm dir[4Plsmkdir dircd /lab3/excerises/[K[4P~/excerises/lab3/excerises/[K[4P~/excerises[1P/excerisesls[Kcd excerisesscript -a lab2.LOGgit push -u origin lab2commit -m 'started lab2'add .[K[27@cp -pr ~/cs220/labs/lab2/exercises[C[C[22Pd submit/lab2p -pr ~/cs220/labs/lab2/exercises .[22Pd submit/lab2[6@mkdir -p[C[C[C[C[C[C[C[C[C[C[C[C[6Pcd[C[C[C[C[C[C[C[C[C[C[C[C[Kmkdir -p submit/lab2git checkout -b lab2[10Pcd ~/i220a[2Pgit pullcd ~/cs220script -a lab2.LOG[10Pgit pushscript -a lab2.LOG[8Pcd ~/cs220script -a lab2.LOG[10Pgit pushcommit -m 'completed Lab2'add .[Kcd ~/i220a/submit/lab2[13Pgit add .commit -m 'completed Lab2'add .[Kcd ~/i220a/submit/lab2./hello 'lisa simpson' 'bart simpson'[1@ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmake[Kvim hello.c[2Pgdb hellols[Kgdb hello[K./hello 'lisa  simpson' 'bart simpson'lisa bart[Kmake[K[2Plscd cs220/labs/lab2/exercises/2-hello-upcase-args[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C~/exercises/[Kcs220/labs/lab2/exercises/2-hello-upcase-args[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K`/i220a/submit/lab3/exercises
+> cd `/i220a/submit/lab3/exercises[1P/i220a/submit/lab3/exercises[C[C[C[C[C~/i220a/submit/lab3/exercises[C[C[C[C[C[C
+> cd `/i220a/submit/lab3/exercises
+cd ~/i220a/submit/lab3/exercises[A[C[Crmdir dir[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[Ccd `/i220a/submit/lab3/exercises
+cd ~/i220a/submit/lab3/exercises[A[C[Crmdir dir[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[Ccd `/i220a/submit/lab3/exercises
+cd ~/i220a/submit/lab3/exercises[A[C[C[K
+[K[A[C[Ccd `/i220a/submit/lab3/exercises
+cd ~/i220a/submit/lab3/exercises[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+bash: /i220a/submit/lab3/exercises: No such file or directory
+bash: cd: /i220a/submit/lab3/exercises: No such file or directory
+psammon1@remote05:~/i220a/submit/lab3$ cd `/i220a/submit/lab3/exercises
+cd ~/i220a/submit/lab3/exercises
+cd `/i220a/submit/lab3/exercises[A[A[C[C[C[C[C[C[C[K
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccd `/i220a/submit/lab3/exercises
+cd ~/i220a/submit/lab3/exercises
+cd `/i220a/submit/lab3/exercises[A[A[C[C[C[C[C[C[Crmdir dir[K
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[6Pgitdel di[3Pgitrmdir dircd `/i220a/submit/lab3/exercises
+cd ~/i220a/submit/lab3/exercises
+cd `/i220a/submit/lab3/exercises[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ks[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kls
+exercises  lab3.LOG
+psammon1@remote05:~/i220a/submit/lab3$ cd /exercises
+bash: cd: /exercises: No such file or directory
+psammon1@remote05:~/i220a/submit/lab3$ cd /exercisesls[Kcd `/i220a/submit/lab3/exercises
+cd ~/i220a/submit/lab3/exercises
+cd `/i220a/submit/lab3/exercises[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[Kcd `/i220a/submit/lab3/exercises[1P/i220a/submit/lab3/exercises~/i220a/submit/lab3/exercises[C/i220a/submit/lab3/exercisesc/i220a/submit/lab3/exercisess/i220a/submit/lab3/exercisess/i220a/submit/lab3/exercises[1P/i220a/submit/lab3/exercises2/i220a/submit/lab3/exercises2/i220a/submit/lab3/exercises0/i220a/submit/lab3/exercises
+bash: cd: /home/psammon1/cs220/i220a/submit/lab3/exercises: No such file or directory
+psammon1@remote05:~/i220a/submit/lab3$ cd ~/cs220/i220a/submit/lab3/exercises[1P/lab3/exercises[1P/lab3/exercises[1P/lab3/exercises[1P/lab3/exercises[1P/lab3/exercises[1P/lab3/exercises[1Plab3/exercises[1P/lab3/exercises[1P/lab3/exercises[1P/lab3/exercises[1P/lab3/exercises[1P/lab3/exercisesc/lab3/exercises[1P/lab3/exercisesl/lab3/exercisesa/lab3/exercisesb/lab3/exercisess/lab3/exercises
+psammon1@remote05:~/cs220/labs/lab3/exercises$ mkdir dir
+psammon1@remote05:~/cs220/labs/lab3/exercises$ touch[K[K[K[K[Ktouch t1.c T1.s v.c v1.s x.c dir/t2.c dir/T2.s1 dir/t3
+psammon1@remote05:~/cs220/labs/lab3/exercises$ ;s
+bash: syntax error near unexpected token `;'
+psammon1@remote05:~/cs220/labs/lab3/exercises$ ls
+dir  t1.c  T1.s  v1.s  v.c  x.c
+psammon1@remote05:~/cs220/labs/lab3/exercises$ ls -l
+total 0
+drwxr-x--- 2 psammon1 psammon1 54 Sep 17 12:23 dir
+-rw-r----- 1 psammon1 psammon1  0 Sep 17 12:23 t1.c
+-rw-r----- 1 psammon1 psammon1  0 Sep 17 12:23 T1.s
+-rw-r----- 1 psammon1 psammon1  0 Sep 17 12:23 v1.s
+-rw-r----- 1 psammon1 psammon1  0 Sep 17 12:23 v.c
+-rw-r----- 1 psammon1 psammon1  0 Sep 17 12:23 x.c
+psammon1@remote05:~/cs220/labs/lab3/exercises$ ls -tl
+total 0
+drwxr-x--- 2 psammon1 psammon1 54 Sep 17 12:23 dir
+-rw-r----- 1 psammon1 psammon1  0 Sep 17 12:23 x.c
+-rw-r----- 1 psammon1 psammon1  0 Sep 17 12:23 v1.s
+-rw-r----- 1 psammon1 psammon1  0 Sep 17 12:23 v.c
+-rw-r----- 1 psammon1 psammon1  0 Sep 17 12:23 T1.s
+-rw-r----- 1 psammon1 psammon1  0 Sep 17 12:23 t1.c
+psammon1@remote05:~/cs220/labs/lab3/exercises$ ls dir
+t2.c  T2.s1  t3
+psammon1@remote05:~/cs220/labs/lab3/exercises$ ls -l dir
+total 0
+-rw-r----- 1 psammon1 psammon1 0 Sep 17 12:23 t2.c
+-rw-r----- 1 psammon1 psammon1 0 Sep 17 12:23 T2.s1
+-rw-r----- 1 psammon1 psammon1 0 Sep 17 12:23 t3
+psammon1@remote05:~/cs220/labs/lab3/exercises$ ls dir [K[K[K[K-tl dir
+total 0
+-rw-r----- 1 psammon1 psammon1 0 Sep 17 12:23 T2.s1
+-rw-r----- 1 psammon1 psammon1 0 Sep 17 12:23 t3
+-rw-r----- 1 psammon1 psammon1 0 Sep 17 12:23 t2.c
+psammon1@remote05:~/cs220/labs/lab3/exercises$ ls -t dr[Kir
+T2.s1  t3  t2.c
+psammon1@remote05:~/cs220/labs/lab3/exercises$ ls T*
+T1.s
+psammon1@remote05:~/cs220/labs/lab3/exercises$ ls dir/*.?
+dir/t2.c
+psammon1@remote05:~/cs220/labs/lab3/exercises$ ls [t-v]*.c
+t1.c  v.c
+psammon1@remote05:~/cs220/labs/lab3/exercises$ ls dor[K[Kir/bin[K[K[K[K[K[K[K/bin ?[K[K/?[p-s]*
+/bin/cp    /bin/grep  /bin/lsblk   /bin/ps    /bin/ypdomainname
+/bin/cpio  /bin/ip    /bin/lsmod   /bin/ss    /bin/zsh
+/bin/csh   /bin/ls    /bin/openvt  /bin/true  /bin/zsh5
+psammon1@remote05:~/cs220/labs/lab3/exercises$ ls /etc/*[r][c]
+/etc/bash.bashrc    /etc/gnashthumbnailrc  /etc/nanorc	       /etc/slsh.rc
+/etc/chktexrc	    /etc/inputrc	   /etc/pbuilderrc     /etc/wgetrc
+/etc/csh.cshrc	    /etc/mail.rc	   /etc/quilt.quiltrc
+/etc/gnashpluginrc  /etc/matplotlibrc	   /etc/sbclrc
+/etc/gnashrc	    /etc/Muttrc		   /etc/screenrc
+psammon1@remote05:~/cs220/labs/lab3/exercises$ ls dir[K[K[Kbin[K[K[K/bin/???
+/bin/cat  /bin/csh  /bin/dir  /bin/pwd	/bin/red  /bin/sed  /bin/tar  /bin/zsh
+psammon1@remote05:~/cs220/labs/lab3/exercises$ ls > ls.log
+psammon1@remote05:~/cs220/labs/lab3/exercises$ cat ls.log
+dir
+ls.log
+t1.c
+T1.s
+v1.s
+v.c
+x.c
+psammon1@remote05:~/cs220/labs/lab3/exercises$ cat >cat.log
+fpsdgkspdgksdpglkprogkrgokerpgerogkeprogkrpog
+ergkerpgkerpgkerogkelrgk;lgekregoremgepheromh
+efiowjegowejgwprgjdlfmqepfomfdslgmfgkdmfg;llk^[[Apsammon1@remote05:~/cs220/labs/lab3/exercises$ exit
+
+Script done on 2020-09-17 12:48:58-04:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2020-09-17 12:50:15-04:00 [TERM="xterm" TTY="/dev/pts/0" COLUMNS="93" LINES="49"]
+psammon1@remote05:~/i220a/submit/lab3$ cat >cat.log[2Pls.log[1@ls >[C[C[C[C[C[C[C/bin/???etc/*[r][c]bin/?[p-s]*[4P[t-v]*.c[1Pdir/*.?T*[K-t dirl dir[1P[C[C[C[C[C[3Pdir-tl[1Pl[K;stouch t1.c T1.s v.c v1.s x.c dir/t2.c dir/T2.s1 dir/t3 [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmkdir dir[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccd ~/cs220/labs/lab3/exercisesi220a/submit/lab3/exercises[8Plabs/lab3/exercisesi220a/submit/lab3/exercises[8Plabs/lab3/exercises
+psammon1@remote05:~/cs220/labs/lab3/exercises$ cat cat.log
+fpsdgkspdgksdpglkprogkrgokerpgerogkeprogkrpog
+ergkerpgkerpgkerogkelrgk;lgekregoremgepheromh
+efiowjegowejgwprgjdlfmqepfomfdslgmfgkdmfg;llk[Apsammon1@remote05:~/cs220/labs/lab3/exercises$ ls dir >> [Kls.llog[K[K[Kog
+psammon1@remote05:~/cs220/labs/lab3/exercises$ cat ls.log
+dir
+ls.log
+t1.c
+T1.s
+v1.s
+v.c
+x.c
+t2.c
+T2.s1
+t3
+psammon1@remote05:~/cs220/labs/lab3/exercises$ cat <ls.log
+dir
+ls.log
+t1.c
+T1.s
+v1.s
+v.c
+x.c
+t2.c
+T2.s1
+t3
+psammon1@remote05:~/cs220/labs/lab3/exercises$ wc -l
+0
+psammon1@remote05:~/cs220/labs/lab3/exercises$ man wc
+[?1049h[22;0;0t[?1h=WC(1)                                  User Commands                                 WC(1)[m
+[m
+[1mNAME[0m[m
+       wc - print newline, word, and byte counts for each file[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mwc[0m [[4mOPTION[24m]... [[4mFILE[24m]...[m
+       [1mwc[0m [[4mOPTION[24m]... [4m--files0-from=F[24m[m
+[m
+[1mDESCRIPTION[0m[m
+       Print  newline,  word, and byte counts for each FILE, and a total line if more than[m
+       one FILE is specified.  A word is a non-zero-length sequence of  characters  delim‐[m
+       ited by white space.[m
+[m
+       With no FILE, or when FILE is -, read standard input.[m
+[m
+       The  options  below  may  be used to select which counts are printed, always in the[m
+       following order: newline, word, character, byte, maximum line length.[m
+[m
+       [1m-c[0m, [1m--bytes[0m[m
+              print the byte counts[m
+[m
+       [1m-m[0m, [1m--chars[0m[m
+              print the character counts[m
+[m
+       [1m-l[0m, [1m--lines[0m[m
+              print the newline counts[m
+[m
+       [1m--files0-from[0m=[4mF[24m[m
+              read input from the files specified by NUL-terminated names in file F; If  F[m
+              is - then read names from standard input[m
+[m
+       [1m-L[0m, [1m--max-line-length[0m[m
+              print the maximum display width[m
+[m
+       [1m-w[0m, [1m--words[0m[m
+              print the word counts[m
+[m
+       [1m--help[0m display this help and exit[m
+[m
+       [1m--version[0m[m
+              output version information and exit[m
+[m
+[1mAUTHOR[0m[m
+       Written by Paul Rubin and David MacKenzie.[m
+[m
+[1mREPORTING[0m [1mBUGS[0m[m
+       GNU coreutils online help: <https://www.gnu.org/software/coreutils/>[m
+[7m Manual page wc(1) line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0tpsammon1@remote05:~/cs220/labs/lab3/exercises$ ls | wc -l
+8
+psammon1@remote05:~/cs220/labs/lab3/exercises$ ls d[K/bin/???? | wc -l
+23
+psammon1@remote05:~/cs220/labs/lab3/exercises$ bin-c[K[K[K[K[Kbing[K[K[K[Kmk[K[Ktouch bin.c[K[K-c.log
+psammon1@remote05:~/cs220/labs/lab3/exercises$ log.[K[K[K[Kls /bin [K/[c]* > [Kbin-c.log
+psammon1@remote05:~/cs220/labs/lab3/exercises$ cat [K bin.c[K[K[K[K[K[K[K[K[Kwc -l | cat bin-c.log
+/bin/cat
+/bin/chacl
+/bin/chgrp
+/bin/chmod
+/bin/chown
+/bin/chvt
+/bin/cp
+/bin/cpio
+/bin/csh
+psammon1@remote05:~/cs220/labs/lab3/exercises$ wc -l | cat bin-c.logls /bin/[c]* >bin-c.log[8Ptouch bin-c.logls /bin/???? | wc -l[10P[C[C[C[C[C[C[C[10@/bin/???? [C[C[C[C[C[C[C[5Ptouch bin-c.logls /bin/[c]* >bin-c.log[2Pwc -l | cat bin-c.log[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kcat bin-c.log | wc -l
+9
+psammon1@remote05:~/cs220/labs/lab3/exercises$ ls  [K[K *[K/etc*[K/* | wc -l[1@-[1@R[1@ 
+ls: cannot open directory '/etc/polkit-1/localauthority': Permission denied
+ls: cannot open directory '/etc/ssl/private': Permission denied
+ls: cannot open directory '/etc/systemd/system/apparmor.service.d': Permission denied
+ls: cannot open directory '/etc/systemd/system/x2goserver.service.d': Permission denied
+ls: cannot open directory '/etc/x2go/x2gosql/passwords': Permission denied
+ls: cannot open directory '/etc/xdg/new-xfce4/desktop': Permission denied
+ls: cannot open directory '/etc/xdg/new-xfce4/panel/launcher-10': Permission denied
+ls: cannot open directory '/etc/xdg/new-xfce4/panel/launcher-11': Permission denied
+ls: cannot open directory '/etc/xdg/new-xfce4/panel/launcher-12': Permission denied
+ls: cannot open directory '/etc/xdg/new-xfce4/panel/launcher-15': Permission denied
+ls: cannot open directory '/etc/xdg/new-xfce4/panel/launcher-17': Permission denied
+ls: cannot open directory '/etc/xdg/new-xfce4/panel/launcher-18': Permission denied
+ls: cannot open directory '/etc/xdg/new-xfce4/panel/launcher-19': Permission denied
+ls: cannot open directory '/etc/xdg/new-xfce4/panel/launcher-21': Permission denied
+ls: cannot open directory '/etc/xdg/new-xfce4/panel/launcher-22': Permission denied
+ls: cannot open directory '/etc/xdg/new-xfce4/panel/launcher-23': Permission denied
+ls: cannot open directory '/etc/xdg/new-xfce4/panel/launcher-5': Permission denied
+ls: cannot open directory '/etc/xdg/new-xfce4/panel/launcher-9': Permission denied
+ls: cannot open directory '/etc/xdg/new-xfce4/terminal': Permission denied
+ls: cannot open directory '/etc/xdg/new-xfce4/xfconf/xfce-perchannel-xml': Permission denied
+ls: cannot open directory '/etc/xdg/new-xfce4/xfwm4': Permission denied
+4993
+psammon1@remote05:~/cs220/labs/lab3/exercises$ man tr
+[?1049h[22;0;0t[?1h=TR(1)                                  User Commands                                 TR(1)[m
+[m
+[1mNAME[0m[m
+       tr - translate or delete characters[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mtr[0m [[4mOPTION[24m]... [4mSET1[24m [[4mSET2[24m][m
+[m
+[1mDESCRIPTION[0m[m
+       Translate,  squeeze, and/or delete characters from standard input, writing to stan‐[m
+       dard output.[m
+[m
+       [1m-c[0m, [1m-C[0m, [1m--complement[0m[m
+              use the complement of SET1[m
+[m
+       [1m-d[0m, [1m--delete[0m[m
+              delete characters in SET1, do not translate[m
+[m
+       [1m-s[0m, [1m--squeeze-repeats[0m[m
+              replace each sequence of a repeated character that is  listed  in  the  last[m
+              specified SET, with a single occurrence of that character[m
+[m
+       [1m-t[0m, [1m--truncate-set1[0m[m
+              first truncate SET1 to length of SET2[m
+[m
+       [1m--help[0m display this help and exit[m
+[m
+       [1m--version[0m[m
+              output version information and exit[m
+[m
+       SETs  are  specified  as strings of characters.  Most represent themselves.  Inter‐[m
+       preted sequences are:[m
+[m
+       \NNN   character with octal value NNN (1 to 3 octal digits)[m
+[m
+       \\     backslash[m
+[m
+       \a     audible BEL[m
+[m
+       \b     backspace[m
+[m
+       \f     form feed[m
+[m
+       \n     new line[m
+[m
+       \r     return[m
+[m
+       \t     horizontal tab[m
+[7m Manual page tr(1) line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0tpsammon1@remote05:~/cs220/labs/lab3/exercises$ ls /[K/[K./{[K[A-Z]*
+./T1.s
+psammon1@remote05:~/cs220/labs/lab3/exercises$ ls
+bin-c.log  cat.log  dir  ls.log  t1.c  T1.s  v1.s  v.c	x.c
+psammon1@remote05:~/cs220/labs/lab3/exercises$ cd[K[Kexit
+
+Script done on 2020-09-17 13:38:18-04:00 [COMMAND_EXIT_CODE="0"]

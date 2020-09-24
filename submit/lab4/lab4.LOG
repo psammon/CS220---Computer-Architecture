@@ -1,0 +1,448 @@
+Script started on 2020-09-24 11:05:37-04:00 [TERM="xterm" TTY="/dev/pts/4" COLUMNS="80" LINES="24"]
+psammon1@remote03:~/i220a/submit/lab4$ cd ~/cs220/labs/lab4/exercises
+psammon1@remote03:~/cs220/labs/lab4/exercises$ ls
+1-pointers     3-bad-types   5-void-pointers  Makefile
+2-in-pointers  4-cast-types  6-in-voids
+psammon1@remote03:~/cs220/labs/lab4/exercises$ make -f //[K[K../Makefile
+make: ../Makefile: No such file or directory
+make: *** No rule to make target '../Makefile'.  Stop.
+psammon1@remote03:~/cs220/labs/lab4/exercises$ make -f ../Makefile[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Klscd ~/cs220/labs/lab4/exercises/1- pointers
+psammon1@remote03:~/cs220/labs/lab4/exercises/1-pointers$ ls
+pointers.c
+psammon1@remote03:~/cs220/labs/lab4/exercises/1-pointers$ vim pointer.c[K[Ks.c
+[?1000h[?2004h[?1049h[22;0;0t[?1h=[?2004h[1;24r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[24;1H"pointers.c" 18L, 458C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1H[35m#include [m[31m<stdio.h>[m
+
+[32mint[m main() {
+  [32mchar[m chars[] = { [31m'a'[m, [31m'b'[m, [31m'c'[m, [31m'd'[m, [31m'e'[m };
+  [32mchar[m *cp = chars;
+  [33mfor[m ([32munsigned[m i = [31m0[m; i < [33msizeof[m(chars)/[33msizeof[m(chars[[31m0[m]); i++) {
+    printf([31m"char pointer cp = [m[35m%p[m[31m, pointing at char [m[35m%c\n[m[31m"[m, cp, *cp);
+    cp++;
+  }
+
+  [32mint[m ints[] = { [31m1[m, [31m2[m, [31m3[m, [31m4[m, [31m5[m };
+  [32mint[m *ip = ints;
+  [33mfor[m ([32munsigned[m i = [31m0[m; i < [33msizeof[m(ints)/[33msizeof[m(ints[[31m0[m]); i++) {
+    printf([31m"int pointer ip = [m[35m%p[m[31m, pointing at int [m[35m%d\n[m[31m"[m, ip, *ip);
+    ip++;
+  }
+  [33mreturn[m [31m0[m;
+}
+[1m[34m~                                                                               [20;1H~                                                                               [21;1H~                                                                               [22;1H~                                                                               [23;1H~                                                                               [m[24;63H1,1[11CAll[1;1H[?25h[?1000l[?1002h[?25l[24;53H:[1;1H[24;1H[K[24;1H:[?2004h[?25hw[?25l[?25hq[?25l[?25h[?25l[?1002l[?2004l"pointers.c" 18L, 458C written[23;2t[23;1t[22;2t[22;1t[23;2t[23;1t
+[?2004l[?1l>[?25h[?1049l[23;0;0tpsammon1@remote03:~/cs220/labs/lab4/exercises/1-pointers$ vim pointers.cls[Kcd ~/cs220/labs/lab4/exercises/1-pointers[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Clscd ~/cs220/labs/lab4/exercises[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[6Pvim conversion.c
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[9P./a.outcc hello.c[3P./a.outvim conversion.ccd ~/cs220/labs/lab4/exercises[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kcd ~/cs220/labs/lab4/exercises/1-pointers[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cvim pointers.c[Kmake -f ../<[KMakefile
+gcc  -g -Wall -Wextra -Wno-unused-parameter -std=c11 -lm  pointers.c   -o pointers
+psammon1@remote03:~/cs220/labs/lab4/exercises/1-pointers$ ./pointers
+char pointer cp = 0x7ffca0744cdf, pointing at char a
+char pointer cp = 0x7ffca0744ce0, pointing at char b
+char pointer cp = 0x7ffca0744ce1, pointing at char c
+char pointer cp = 0x7ffca0744ce2, pointing at char d
+char pointer cp = 0x7ffca0744ce3, pointing at char e
+int pointer ip = 0x7ffca0744cc0, pointing at int 1
+int pointer ip = 0x7ffca0744cc4, pointing at int 2
+int pointer ip = 0x7ffca0744cc8, pointing at int 3
+int pointer ip = 0x7ffca0744ccc, pointing at int 4
+int pointer ip = 0x7ffca0744cd0, pointing at int 5
+psammon1@remote03:~/cs220/labs/lab4/exercises/1-pointers$ ./pointersmake -f ../Makefile[5Pvim pointers.c
+[?1000h[?2004h[?1049h[22;0;0t[?1h=[?2004h[1;24r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[24;1H"pointers.c" 18L, 458C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1H[35m#include [m[31m<stdio.h>[m
+
+[32mint[m main() {
+  [32mchar[m chars[] = { [31m'a'[m, [31m'b'[m, [31m'c'[m, [31m'd'[m, [31m'e'[m };
+  [32mchar[m *cp = chars;
+  [33mfor[m ([32munsigned[m i = [31m0[m; i < [33msizeof[m(chars)/[33msizeof[m(chars[[31m0[m]); i++) {
+    printf([31m"char pointer cp = [m[35m%p[m[31m, pointing at char [m[35m%c\n[m[31m"[m, cp, *cp);
+    cp++;
+  }
+
+  [32mint[m ints[] = { [31m1[m, [31m2[m, [31m3[m, [31m4[m, [31m5[m };
+  [32mint[m *ip = ints;
+  [33mfor[m ([32munsigned[m i = [31m0[m; i < [33msizeof[m(ints)/[33msizeof[m(ints[[31m0[m]); i++) {
+    printf([31m"int pointer ip = [m[35m%p[m[31m, pointing at int [m[35m%d\n[m[31m"[m, ip, *ip);
+    ip++;
+  }
+  [33mreturn[m [31m0[m;
+}
+[1m[34m~                                                                               [20;1H~                                                                               [21;1H~                                                                               [22;1H~                                                                               [23;1H~                                                                               [m[24;63H1,1[11CAll[1;1H[?25h[?1000l[?1002h[?25l[3;12H[46m{[18;1H}[m[24;64H8,1[18;1H[?25h[?25l[24;53H:[18;1H[24;1H[K[24;1H:[?2004h[?25hw[?25l[?25hq[?25l[?25h[?25l[?1002l[?2004l"pointers.c" 18L, 458C written[23;2t[23;1t[22;2t[22;1t[23;2t[23;1t
+[?2004l[?1l>[?25h[?1049l[23;0;0tpsammon1@remote03:~/cs220/labs/lab4/exercises/1-pointers$ vim pointers.c[4P./pointersmake -f ../Makefile[5Pvim pointers.cls[Kcd ~/cs220/labs/lab4/exercises/1-pointers[K[K[K[K[K[K[K[K[K[K2-in-pointers
+psammon1@remote03:~/cs220/labs/lab4/exercises/2-in-pointers$ wim in-pointers.c
+bash: wim: command not found
+psammon1@remote03:~/cs220/labs/lab4/exercises/2-in-pointers$ wim in-pointers.c[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kls
+in-pointers.c
+psammon1@remote03:~/cs220/labs/lab4/exercises/2-in-pointers$ vim in-pointers.c 
+[?1000h[?2004h[?1049h[22;0;0t[?1h=[?2004h[1;24r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[24;1H"in-pointers.c" 48L, 1281C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1H[35m#include [m[31m<stdbool.h>[m
+[35m#include [m[31m<stdio.h>[m
+[35m#include [m[31m<stdlib.h>[m
+
+[32mint[m main() {
+  [32menum[m { N = [31m5[m };
+  [32menum[m { MIN_OK_RUN = [31m3[m };
+
+  [32mint[m ints[N];
+  [32mint[m nOk = [31m0[m;
+  [32mint[m nErr = [31m0[m;
+  [32mint[m nRun = [31m0[m;
+  printf([31m"Given the base address of an int[] array you need to[m[35m\n[m[31m"[14;10H"provide the address of a specified element.[m[35m\n[m[31m"[15;10H"An int occupies [m[35m%zu[m[31m bytes.[m[35m\n\n[m[31m"[16;10H"Please provide addresses in hex without any leading 0x[m[35m\n[m[31m"[17;10H"You will need [m[35m%d[m[31m correct responses in succession in order[m[35m\n[m[31m"[18;10H"to complete this exercise.[m[35m\n[m[31m"[m, [33msizeof[m([32mint[m), MIN_OK_RUN);
+  [33mwhile[m (nRun < MIN_OK_RUN) {
+    [32mint[m index = rand()%N;
+    printf([31m"base of ints[] is at [m[35m%p\n[m[31m"[m, ints);
+    printf([31m"enter pointer to ints[[m[35m%d[m[31m]: "[m, index);
+    fflush([31mstdout[m);[24;63H1,1[11CTop[1;1H[?25h[?1000l[?1002h[?25l[1;23r[1;1H[3M[1;24r[21;5H[32mint[m *p;
+    [33mif[m (scanf([31m"[m[35m%p[m[31m"[m, &p) != [31m1[m) {[23;7Hprintf([31m"bad input: enter hex pointer value without leading 0x or 0X[m[35m\n[m[31m"[m);[24;1H[K[24;63H9,1[11C12%[6;1H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;5H}
+    [33melse[m {[23;7H[32mbool[m isOk = (p == &ints[index]);[24;63H[K[24;63H12,1[10C24%[6;1H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;7H[32mint[m val __attribute__((unused)) = *p;[22;7Hprintf([31m"[m[35m%s\n[m[31m"[m, isOk ? [31m"ok"[m : [31m"not ok"[m);[23;7H[33mif[m (isOk) {[24;63H[K[24;63H15,1[10C36%[6;1H[?25h[?25l[1;23r[1;1H[3L[1;24r[1;3H[32menum[m { MIN_OK_RUN = [31m3[m };
+
+  [32mint[m ints[N];[24;63H[K[24;63H15,1[10C24%[9;1H[?25h[?25l[1;23r[1;1H[3L[1;24r[2;1H[32mint[m main() {
+  [32menum[m { N = [31m5[m };[24;63H[K[24;63H15,1[10C12%[12;1H[?25h[?25l[1;23r[1;1H[3L[1;24r[1;1H[35m#include [m[31m<stdbool.h>[m
+[35m#include [m[31m<stdio.h>[m
+[35m#include [m[31m<stdlib.h>[m[24;63H[K[24;63H15,1[10CTop[15;1H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;5H[32mint[m *p;
+    [33mif[m (scanf([31m"[m[35m%p[m[31m"[m, &p) != [31m1[m) {[23;7Hprintf([31m"bad input: enter hex pointer value without leading 0x or 0X[m[35m\n[m[31m"[m);[24;63H[K[24;63H15,1[10C12%[12;1H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;5H}
+    [33melse[m {[23;7H[32mbool[m isOk = (p == &ints[index]);[24;63H[K[24;63H15,1[10C24%[9;1H[?25h[?25l[1;23r[1;1H[3L[1;24r[2;1H[32mint[m main() {
+  [32menum[m { N = [31m5[m };[24;63H[K[24;63H15,1[10C12%[12;1H[?25h[?25l[1;23r[1;1H[3L[1;24r[1;1H[35m#include [m[31m<stdbool.h>[m
+[35m#include [m[31m<stdio.h>[m
+[35m#include [m[31m<stdlib.h>[m[24;63H[K[24;63H15,1[10CTop[15;1H[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[1;23r[1;1H[3M[1;24r[21;5H[32mint[m *p;
+    [33mif[m (scanf([31m"[m[35m%p[m[31m"[m, &p) != [31m1[m) {[23;7Hprintf([31m"bad input: enter hex pointer value without leading 0x or 0X[m[35m\n[m[31m"[m);[24;63H[K[24;63H15,1[10C12%[12;1H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;5H}
+    [33melse[m {[23;7H[32mbool[m isOk = (p == &ints[index]);[24;63H[K[24;63H15,1[10C24%[9;1H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;7H[32mint[m val __attribute__((unused)) = *p;[22;7Hprintf([31m"[m[35m%s\n[m[31m"[m, isOk ? [31m"ok"[m : [31m"not ok"[m);[23;7H[33mif[m (isOk) {[24;63H[K[24;63H15,1[10C36%[6;1H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;9HnOk++;[22;9HnRun++;[23;7H}[24;63H[K[24;63H18,1[10C48%[6;1H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;7H[33melse[m {[22;9HnErr++;[23;9HnRun = [31m0[m;[24;63H[K[24;63H21,1[10C60%[6;1H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;7H}
+    }
+    [32mint[m c = getchar();[24;63H[K[24;63H24,1[10C72%[6;1H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;5H[33mwhile[m (c != [35m'\n'[m && c != [31mEOF[m) { [34m//waste line[m[22;7Hc = getchar();
+    }[24;63H[K[24;63H27,1[10C84%[6;1H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;3H}
+  printf([31m"# ok = [m[35m%d[m[31m; # errors = [m[35m%d\n[m[31m"[m, nOk, nErr);
+  [33mreturn[m [31m0[m;[24;63H[K[24;63H30,1[10C96%[6;1H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;1H}
+[1m[34m~                                                                               [23;1H~                                                                               [m[24;63H[K[24;63H33,1[10CBot[6;1H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;1H[1m[34m~                                                                               [22;1H~                                                                               [23;1H~                                                                               [m[24;63H[K[24;63H36,1[10CBot[6;1H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;1H[1m[34m~                                                                               [22;1H~                                                                               [23;1H~                                                                               [m[24;63H[K[24;63H39,1[10CBot[6;1H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;1H[1m[34m~                                                                               [22;1H~                                                                               [23;1H~                                                                               [m[24;63H[K[24;63H42,1[10CBot[6;1H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;1H[1m[34m~                                                                               [22;1H~                                                                               [23;1H~                                                                               [m[24;63H[K[24;63H45,1[10CBot[6;1H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;1H[1m[34m~                                                                               [22;1H~                                                                               [23;1H~                                                                               [m[24;63H[K[24;63H48,1[10CBot[6;1H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;1H[1m[34m~                                                                               [22;1H~                                                                               [23;1H~                                                                               [m[24;63H[K[24;63H48,1[10CBot[3;1H[?25h[?25l[1;23r[1;1H[3L[1;24r[1;7Hc = getchar();
+    }
+  }[24;63H[K[24;63H48,1[10CBot[6;1H[?25h[?25l[1;23r[1;1H[3L[1;24r[1;5H}
+    [32mint[m c = getchar();
+    [33mwhile[m (c != [35m'\n'[m && c != [31mEOF[m) { [34m//waste line[m[24;63H[K[24;63H48,1[10CBot[9;1H[?25h[?25l[1;23r[1;1H[3L[1;24r[1;9HnErr++;[2;9HnRun = [31m0[m;[3;7H}[24;63H[K[24;63H48,1[10CBot[12;1H[?25h[?25l[1;23r[1;1H[3L[1;24r[1;9HnRun++;[2;7H}[3;7H[33melse[m {[24;63H[K[24;63H48,1[10CBot[15;1H[?25h[?25l[1;23r[1;1H[3L[1;24r[1;7Hprintf([31m"[m[35m%s\n[m[31m"[m, isOk ? [31m"ok"[m : [31m"not ok"[m);[2;7H[33mif[m (isOk) {[3;9HnOk++;[24;63H[K[24;63H48,1[10CBot[18;1H[?25h[?25l[1;23r[1;1H[3L[1;24r[1;5H[33melse[m {[2;7H[32mbool[m isOk = (p == &ints[index]);[3;7H[32mint[m val __attribute__((unused)) = *p;[24;63H[K[24;63H48,1[10CBot[21;1H[?25h[?25l[1;23r[1;1H[3L[1;24r[1;5H[33mif[m (scanf([31m"[m[35m%p[m[31m"[m, &p) != [31m1[m) {[2;7Hprintf([31m"bad input: enter hex pointer value without leading 0x or 0X[m[35m\n[m[31m"[m);
+    }[24;63H[K[24;63H42,1[10C96%[18;1H[?25h[?25l[1;23r[1;1H[3L[1;24r[1;5Hprintf([31m"enter pointer to ints[[m[35m%d[m[31m]: "[m, index);
+    fflush([31mstdout[m);
+    [32mint[m *p;[24;63H[K[24;63H39,1[10C84%[18;1H[?25h[?25l[1;23r[1;1H[3L[1;24r[1;3H[33mwhile[m (nRun < MIN_OK_RUN) {
+    [32mint[m index = rand()%N;
+    printf([31m"base of ints[] is at [m[35m%p\n[m[31m"[m, ints);[24;63H[K[24;63H36,1[10C72%[18;1H[?25h[?25l[1;23r[1;1H[3L[1;24r[1;10H[31m"Please provide addresses in hex without any leading 0x[m[35m\n[m[31m"[2;10H"You will need [m[35m%d[m[31m correct responses in succession in order[m[35m\n[m[31m"[3;10H"to complete this exercise.[m[35m\n[m[31m"[m, [33msizeof[m([32mint[m), MIN_OK_RUN);[24;63H[K[24;63H33,1[10C60%[18;1H[?25h[?25l[1;23r[1;1H[3L[1;24r[1;3Hprintf([31m"Given the base address of an int[] array you need to[m[35m\n[m[31m"[2;10H"provide the address of a specified element.[m[35m\n[m[31m"[3;10H"An int occupies [m[35m%zu[m[31m bytes.[m[35m\n\n[m[31m"[m[24;63H[K[24;63H30,1[10C48%[18;1H[?25h[?25l[1;23r[1;1H[3L[1;24r[1;3H[32mint[m nOk = [31m0[m;
+  [32mint[m nErr = [31m0[m;
+  [32mint[m nRun = [31m0[m;[24;63H[K[24;63H27,1[10C36%[18;1H[?25h[?25l[1;23r[1;1H[3L[1;24r[1;3H[32menum[m { MIN_OK_RUN = [31m3[m };
+
+  [32mint[m ints[N];[24;63H[K[24;63H24,1[10C24%[18;1H[?25h[?25l[1;23r[1;1H[3L[1;24r[2;1H[32mint[m main() {
+  [32menum[m { N = [31m5[m };[24;63H[K[24;63H21,1[10C12%[18;1H[?25h[?25l[1;23r[1;1H[3L[1;24r[1;1H[35m#include [m[31m<stdbool.h>[m
+[35m#include [m[31m<stdio.h>[m
+[35m#include [m[31m<stdlib.h>[m[24;63H[K[24;63H18,1[10CTop[18;1H[?25h[?25l[?25h[?25l[1;23r[1;1H[3M[1;24r[21;5H[32mint[m *p;
+    [33mif[m (scanf([31m"[m[35m%p[m[31m"[m, &p) != [31m1[m) {[23;7Hprintf([31m"bad input: enter hex pointer value without leading 0x or 0X[m[35m\n[m[31m"[m);[24;63H[K[24;63H18,1[10C12%[15;1H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;5H}
+    [33melse[m {[23;7H[32mbool[m isOk = (p == &ints[index]);[24;63H[K[24;63H18,1[10C24%[12;1H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;7H[32mint[m val __attribute__((unused)) = *p;[22;7Hprintf([31m"[m[35m%s\n[m[31m"[m, isOk ? [31m"ok"[m : [31m"not ok"[m);[23;7H[33mif[m (isOk) {[24;63H[K[24;63H18,1[10C36%[9;1H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;9HnOk++;[22;9HnRun++;[23;7H}[24;63H[K[24;63H18,1[10C48%[6;1H[?25h[?25l[1;23r[1;1H[3L[1;24r[1;3H[32mint[m nOk = [31m0[m;
+  [32mint[m nErr = [31m0[m;
+  [32mint[m nRun = [31m0[m;[24;63H[K[24;63H18,1[10C36%[9;1H[?25h[?25l[1;23r[1;1H[3L[1;24r[1;3H[32menum[m { MIN_OK_RUN = [31m3[m };
+
+  [32mint[m ints[N];[24;63H[K[24;63H18,1[10C24%[12;1H[?25h[?25l[1;23r[1;1H[3L[1;24r[2;1H[32mint[m main() {
+  [32menum[m { N = [31m5[m };[24;63H[K[24;63H18,1[10C12%[15;1H[?25h[?25l[1;23r[1;1H[3L[1;24r[1;1H[35m#include [m[31m<stdbool.h>[m
+[35m#include [m[31m<stdio.h>[m
+[35m#include [m[31m<stdlib.h>[m[24;63H[K[24;63H18,1[10CTop[18;1H[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[1;23r[1;1H[3M[1;24r[21;5H[32mint[m *p;
+    [33mif[m (scanf([31m"[m[35m%p[m[31m"[m, &p) != [31m1[m) {[23;7Hprintf([31m"bad input: enter hex pointer value without leading 0x or 0X[m[35m\n[m[31m"[m);[24;63H[K[24;63H18,1[10C12%[15;1H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;5H}
+    [33melse[m {[23;7H[32mbool[m isOk = (p == &ints[index]);[24;63H[K[24;63H18,1[10C24%[12;1H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;7H[32mint[m val __attribute__((unused)) = *p;[22;7Hprintf([31m"[m[35m%s\n[m[31m"[m, isOk ? [31m"ok"[m : [31m"not ok"[m);[23;7H[33mif[m (isOk) {[24;63H[K[24;63H18,1[10C36%[9;1H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;9HnOk++;[22;9HnRun++;[23;7H}[24;63H[K[24;63H18,1[10C48%[6;1H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;7H[33melse[m {[22;9HnErr++;[23;9HnRun = [31m0[m;[24;63H[K[24;63H33,14[9C60%[18;14H[?25h[?25l[24;53H:[18;14H[24;53H[K[24;1H:[?2004h[?25hw[?25l[?25hq[?25l[?25h[?25l[?1002l[?2004l"in-pointers.c" 48L, 1281C written[23;2t[23;1t[22;2t[22;1t[23;2t[23;1t
+[?2004l[?1l>[?25h[?1049l[23;0;0tpsammon1@remote03:~/cs220/labs/lab4/exercises/2-in-pointers$ vim in-pointers.c ls[Kwim in-pointers.ccd ~/cs220/labs/lab4/exercises/2-in-pointers[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[5Pvim pointers.c
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[4P./pointersmake -f ../Makefile [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[5Pvim pointers.c
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmake -f ../Makefile [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ke
+gcc  -g -Wall -Wextra -Wno-unused-parameter -std=c11 -lm  in-pointers.c   -o in-pointers
+psammon1@remote03:~/cs220/labs/lab4/exercises/2-in-pointers$ ./in-pointers
+Given the base address of an int[] array you need to
+provide the address of a specified element.
+An int occupies 4 bytes.
+
+Please provide addresses in hex without any leading 0x
+You will need 3 correct responses in succession in order
+to complete this exercise.
+base of ints[] is at 0x7ffe4c09fa60
+enter pointer to ints[3]: 7ffe4c09fa6c
+ok
+base of ints[] is at 0x7ffe4c09fa60
+enter pointer to ints[1]: ^[[A^[[B        7ffe4c09fa64
+ok
+base of ints[] is at 0x7ffe4c09fa60
+enter pointer to ints[2]: ^C
+psammon1@remote03:~/cs220/labs/lab4/exercises/2-in-pointers$ ./in-pointers
+Given the base address of an int[] array you need to
+provide the address of a specified element.
+An int occupies 4 bytes.
+
+Please provide addresses in hex without any leading 0x
+You will need 3 correct responses in succession in order
+to complete this exercise.
+base of ints[] is at 0x7ffd8d4b58d0
+enter pointer to ints[3]: 7ffd8d4b58dc
+ok
+base of ints[] is at 0x7ffd8d4b58d0
+enter pointer to ints[1]: 7ffd8d4b58dc 4
+ok
+base of ints[] is at 0x7ffd8d4b58d0
+enter pointer to ints[2]: 7ffd8d4b58dc 8
+ok
+# ok = 3; # errors = 0
+psammon1@remote03:~/cs220/labs/lab4/exercises/2-in-pointers$ ./in-pointersmake -f ../Makefile [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Pvim in-pointers.c 
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[Kwim in-pointers.ccd ~/cs220/labs/lab4/exercises/2-in-pointers[K[K[K[K[K[K[K[K[K[K[K[K[K3-bad-types
+psammon1@remote03:~/cs220/labs/lab4/exercises/3-bad-types$ vim bad-types.c
+[?1000h[?2004h[?1049h[22;0;0t[?1h=[?2004h[1;24r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[24;1H"bad-types.c" 18L, 521C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1H[35m#include [m[31m<stdio.h>[m
+
+[32mint[m main() {
+  [32mchar[m cs[] = { [31m'a'[m, [31m'b'[m, [31m'c'[m, [31m'd'[m, [31m'e'[m };
+  [32mint[m ints[] = { [31m1[m, [31m2[m, [31m3[m, [31m4[m, [31m5[m };
+  [32mchar[m *cp = ints;  [34m//expect warning[m
+  [32mint[m *ip = cs;     [34m//expect warning[m
+  [33mfor[m ([32munsigned[m i = [31m0[m; i < [33msizeof[m(cs)/[33msizeof[m(cs[[31m0[m]); i++) {
+    printf([31m"char pointer cp = [m[35m%p[m[31m, pointing at char '[m[35m%c[m[31m' (0x[m[35m%x[m[31m)[m[35m\n[m[31m"[m,[10;12Hcp, *cp, *cp);
+    cp++;
+  }
+  [33mfor[m ([32munsigned[m i = [31m0[m; i < [33msizeof[m(ints)/[33msizeof[m(ints[[31m0[m]); i++) {
+    printf([31m"int pointer ip = [m[35m%p[m[31m, pointing at int [m[35m%d[m[31m (0x[m[35m%x[m[31m)[m[35m\n[m[31m"[m, ip, *ip, *ip);
+    ip++;
+  }
+  [33mreturn[m [31m0[m;
+}
+[1m[34m~                                                                               [20;1H~                                                                               [21;1H~                                                                               [22;1H~                                                                               [23;1H~                                                                               [m[24;63H1,1[11CAll[1;1H[?25h[?1000l[?1002h[?25l[3;12H[46m{[18;1H}[m[24;64H8,1[18;1H[?25h[?25l[24;53H:[18;1H[24;1H[K[24;1H:[?2004h[?25hw[?25l[?25hq[?25l[?25h[?25l[?1002l[?2004l"bad-types.c" 18L, 521C written[23;2t[23;1t[22;2t[22;1t[23;2t[23;1t
+[?2004l[?1l>[?25h[?1049l[23;0;0tpsammon1@remote03:~/cs220/labs/lab4/exercises/3-bad-types$ vim bad-types.ccd ~/cs220/labs/lab4/exercises/3-bad-types[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[8P./in-pointers
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmake -f ../Makefile
+gcc  -g -Wall -Wextra -Wno-unused-parameter -std=c11 -lm  bad-types.c   -o bad-types
+[01m[Kbad-types.c:[m[K In function ‘[01m[Kmain[m[K’:
+[01m[Kbad-types.c:6:14:[m[K [01;35m[Kwarning: [m[Kinitialization of ‘[01m[Kchar *[m[K’ from incompatible pointer type ‘[01m[Kint *[m[K’ [[01;35m[K-Wincompatible-pointer-types[m[K]
+   char *cp = [01;35m[Kints[m[K;  //expect warning
+              [01;35m[K^~~~[m[K
+[01m[Kbad-types.c:7:13:[m[K [01;35m[Kwarning: [m[Kinitialization of ‘[01m[Kint *[m[K’ from incompatible pointer type ‘[01m[Kchar *[m[K’ [[01;35m[K-Wincompatible-pointer-types[m[K]
+   int *ip = [01;35m[Kcs[m[K;     //expect warning
+             [01;35m[K^~[m[K
+psammon1@remote03:~/cs220/labs/lab4/exercises/3-bad-types$ ./bad-types
+char pointer cp = 0x7ffe56e599a0, pointing at char '' (0x1)
+char pointer cp = 0x7ffe56e599a1, pointing at char ' ' (0x0)
+char pointer cp = 0x7ffe56e599a2, pointing at char ' ' (0x0)
+char pointer cp = 0x7ffe56e599a3, pointing at char ' ' (0x0)
+char pointer cp = 0x7ffe56e599a4, pointing at char '' (0x2)
+int pointer ip = 0x7ffe56e599c3, pointing at int 1684234849 (0x64636261)
+int pointer ip = 0x7ffe56e599c7, pointing at int 357 (0x165)
+int pointer ip = 0x7ffe56e599cb, pointing at int 1280 (0x500)
+int pointer ip = 0x7ffe56e599cf, pointing at int -442904832 (0xe599cf00)
+int pointer ip = 0x7ffe56e599d3, pointing at int 8388182 (0x7ffe56)
+psammon1@remote03:~/cs220/labs/lab4/exercises/3-bad-types$ ./bad-typesmake -f ../Makefile[4Pvim bad-types.ccd ~/cs220/labs/lab4/exercises/3-bad-types[K[K[K[K[K[K[K[K[K[K[K4-cs[Kast-types
+psammon1@remote03:~/cs220/labs/lab4/exercises/4-cast-types$ cd ~/cs220/labs/lab4/exercises/4-cast-types[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[9P./bad-types
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmake -f ../Makefile[4Pvim bad-types.c[K[K[K[K[K[K[K[K[K[K[Kcast.types.c
+[?1000h[?2004h[?1049h[22;0;0t[?1h=[?2004h[1;24r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[24;1H"cast.types.c" [New File][2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[2;1H[1m[34m~                                                                               [3;1H~                                                                               [4;1H~                                                                               [5;1H~                                                                               [6;1H~                                                                               [7;1H~                                                                               [8;1H~                                                                               [9;1H~                                                                               [10;1H~                                                                               [11;1H~                                                                               [12;1H~                                                                               [13;1H~                                                                               [14;1H~                                                                               [15;1H~                                                                               [16;1H~                                                                               [17;1H~                                                                               [18;1H~                                                                               [19;1H~                                                                               [20;1H~                                                                               [21;1H~                                                                               [22;1H~                                                                               [23;1H~                                                                               [m[24;63H0,0-1[9CAll[1;1H[?25h[?1000l[?1002h[?25l[24;53H^[[1;1H[24;53H  [1;1H[24;53H^[[1;1H[24;53H  [1;1H[?25h[?25l[24;53H:[1;1H[24;1H[K[24;1H:[?2004h[?25hw[?25l[?25hq[?25l[?25h[?25l[?1002l[?2004l"cast.types.c" [New] 0L, 0C written[23;2t[23;1t[22;2t[22;1t[23;2t[23;1t
+[?2004l[?1l>[?25h[?1049l[23;0;0tpsammon1@remote03:~/cs220/labs/lab4/exercises/4-cast-types$ del cast.types.c
+bash: del: command not found
+psammon1@remote03:~/cs220/labs/lab4/exercises/4-cast-types$ bash
+psammon1@remote03:~/cs220/labs/lab4/exercises/4-cast-types$ h[Kbash help
+bash: help: No such file or directory
+psammon1@remote03:~/cs220/labs/lab4/exercises/4-cast-types$ rm cast.types.c 
+psammon1@remote03:~/cs220/labs/lab4/exercises/4-cast-types$ rm cast.types.c [7Pbash helpvim conversion.c[9P./a.outcc hello.c[1@vim[C[C[C[C[C[C[C[C[1Pcc[C[C[C[C[C[C[C[C[3P./a.outvim conversion.c[7Pbash helprm cast.types.c [Kvim cast-types.c
+[?1000h[?2004h[?1049h[22;0;0t[?1h=[?2004h[1;24r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[24;1H"cast-types.c" 18L, 561C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1H[35m#include [m[31m<stdio.h>[m
+
+[32mint[m main() {
+  [32mchar[m chars[] = { [31m'a'[m, [31m'b'[m, [31m'c'[m, [31m'd'[m, [31m'e'[m };
+  [32mint[m ints[] = { [31m1[m, [31m2[m, [31m3[m, [31m4[m, [31m5[m };
+  [32mchar[m *cp = ([32mchar[m *)ints;
+  [32mint[m *ip = ([32mint[m *)chars;
+  [33mfor[m ([32munsigned[m i = [31m0[m; i < [33msizeof[m(chars)/[33msizeof[m(chars[[31m0[m]); i++) {
+    printf([31m"char pointer cp = [m[35m%p[m[31m, pointing at int [m[35m%d[m[31m (0x[m[35m%x[m[31m)[m[35m\n[m[31m"[m,[10;12Hcp, *cp, *cp);
+    cp = ([32mchar[m *)((([32mint[m *)cp) + [31m1[m);
+  }
+  [33mfor[m ([32munsigned[m i = [31m0[m; i < [33msizeof[m(ints)/[33msizeof[m(ints[[31m0[m]); i++) {
+    printf([31m"int pointer ip = [m[35m%p[m[31m, pointing at char '[m[35m%c[m[31m' (0x[m[35m%x[m[31m)[m[35m\n[m[31m"[m, ip, *ip, *ip);[15;5Hip = ([32mint[m *)((([32mchar[m *)ip) + [31m1[m);
+  }
+  [33mreturn[m [31m0[m;
+}
+[1m[34m~                                                                               [20;1H~                                                                               [21;1H~                                                                               [22;1H~                                                                               [23;1H~                                                                               [m[24;63H1,1[11CAll[1;1H[?25h[?1000l[?1002h[?25l[3;12H[46m{[18;1H}[m[24;64H8,1[18;1H[?25h[?25l[24;53H:[18;1H[24;1H[K[24;1H:[?2004h[?25hw[?25l[?25hq[?25l[?25h[?25l[?1002l[?2004l"cast-types.c" 18L, 561C written[23;2t[23;1t[22;2t[22;1t[23;2t[23;1t
+[?2004l[?1l>[?25h[?1049l[23;0;0tpsammon1@remote03:~/cs220/labs/lab4/exercises/4-cast-types$ vim cast-types.crm cast.types.c [7Pbash helpvim conversion.c[9P./a.outcc hello.c[1@vim[C[C[C[C[C[C[C[C[4P./a.outcc hello.c[1@vim[C[C[C[C[C[C[C[C[4P./a.out[2Pa.outcc hello.c[1@vim[C[C[C[C[C[C[C[C[7Phelp[1Pgdbit pushmerge -m 'merged lab3'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[3Pcheckout lab3
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cpull[Kcheckout master[6Pbranch -l[3Pcd ~/i220ascript -a lab3.LOGgit push -u origin lab3[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccommit -m 'started lab3'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cadd .[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccp -pr ~/cs220/labs/lab3/exercises .[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cd ~/i220a/submit/lab3[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[6Psubmit/lab3
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmkdir -p submit/lab3 [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit checkout -b lab3 [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[10Pcd ~/i220a
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2Pgit pull[Kcd ~/cs220ls[Kcd ~/cs220[3Pgit pullcd ~/i220agit checkout -b lab3 [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmkdir -p submit/lab3 [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[6Pcd
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C~/i220a/submit/lab3[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cp -pr ~/cs220/labs/lab3/exercises .[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[11Pgit add .
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccommit -m 'started lab3'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cpush -u origin lab3[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2Pscript -a lab3.LOG
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[8Pcd ~/i220agit branch -lcheckout masterpull[Kcheckout lab3merge -m 'merged lab3'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cpush[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdb[Khelpvim hello.c[1Pcc[C[C[C[C[C[C[C[C[5Pa.out./a.outvim hello.c[1Pcc[C[C[C[C[C[C[C[C[3P./a.outvim hello.c[1Pcc[C[C[C[C[C[C[C[C[3P./a.outvim conversion.c[7Pbash helprm cast.types.c vim cast-types.c[Kmake -f ../make[K[K[K[KMAke[K[K[Kakefile
+gcc  -g -Wall -Wextra -Wno-unused-parameter -std=c11 -lm  cast-types.c   -o cast-types
+psammon1@remote03:~/cs220/labs/lab4/exercises/4-cast-types$ ./cast-types
+char pointer cp = 0x7ffcf9b50ea0, pointing at int 1 (0x1)
+char pointer cp = 0x7ffcf9b50ea4, pointing at int 2 (0x2)
+char pointer cp = 0x7ffcf9b50ea8, pointing at int 3 (0x3)
+char pointer cp = 0x7ffcf9b50eac, pointing at int 4 (0x4)
+char pointer cp = 0x7ffcf9b50eb0, pointing at int 5 (0x5)
+int pointer ip = 0x7ffcf9b50ec3, pointing at char 'a' (0x64636261)
+int pointer ip = 0x7ffcf9b50ec4, pointing at char 'b' (0x65646362)
+int pointer ip = 0x7ffcf9b50ec5, pointing at char 'c' (0x2656463)
+int pointer ip = 0x7ffcf9b50ec6, pointing at char 'd' (0x36564)
+int pointer ip = 0x7ffcf9b50ec7, pointing at char 'e' (0x465)
+psammon1@remote03:~/cs220/labs/lab4/exercises/4-cast-types$ ./cast-typesmake -f ../Makefile[3Pvim cast-types.crm cast.types.c [7Pbash helpvim conversion.c[9P./a.outcc hello.c[1@vim[C[C[C[C[C[C[C[C[4P./a.outcc hello.c[1@vim[C[C[C[C[C[C[C[C[4P./a.out[2Pa.outcc hello.c[1@vim[C[C[C[C[C[C[C[C[7Phelp[1Pgdbit pushmerge -m 'merged lab3'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[3Pcheckout lab3
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cpull[Kcheckout master[6Pbranch -l[3Pcd ~/i220ascript -a lab3.LOG[8Pcd ~/i220agit branch -lcheckout masterpull[Kcheckout lab3merge -m 'merged lab3'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cpush[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdb[Khelpvim hello.c[1Pcc[C[C[C[C[C[C[C[C[5Pa.out./a.outvim hello.c[1Pcc[C[C[C[C[C[C[C[C[3P./a.outvim hello.c[1Pcc[C[C[C[C[C[C[C[C[3P./a.outvim conversion.c[7Pbash helprm cast.types.c vim cast-types.cmake -f ../Makefile[7P./cast-types[Kcd ~/cs220/[K[K[K[K[K[K[K[K~/cs220/labs/lab4/exercises/void-pointers5void-pointers-void-pointers
+psammon1@remote03:~/cs220/labs/lab4/exercises/5-void-pointers$ ./void-pointers.c [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Pvoid-pointers.c
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Pvoid-pointers.c[Cvoid-pointers.civoid-pointers.c [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmvoid-pointers.c[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C void-pointers.c[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+[?1000h[?2004h[?1049h[22;0;0t[?1h=[?2004h[1;24r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[24;1H"void-pointers.c" 17L, 485C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1H[35m#include [m[31m<stdio.h>[m
+
+[32mint[m main() {
+  [32mchar[m chars[] = { [31m'a'[m, [31m'b'[m, [31m'c'[m, [31m'd'[m, [31m'e'[m };
+  [32mint[m ints[] = { [31m1[m, [31m2[m, [31m3[m, [31m4[m, [31m5[m };
+  [32mvoid[m *p = chars;
+  [33mfor[m ([32munsigned[m i = [31m0[m; i < [33msizeof[m(chars)/[33msizeof[m(chars[[31m0[m]); i++) {
+    printf([31m"void pointer p = [m[35m%p[m[31m, pointing at char [m[35m%c\n[m[31m"[m, p, *([32mchar[m *)p);
+    p = ([32mchar[m *)p + [31m1[m;
+  }
+  p = ints;
+  [33mfor[m ([32munsigned[m i = [31m0[m; i < [33msizeof[m(ints)/[33msizeof[m(ints[[31m0[m]); i++) {
+    printf([31m"void pointer p = [m[35m%p[m[31m, pointing at int [m[35m%d\n[m[31m"[m, p, *([32mint[m *)p);
+    p = ([32mint[m *)p + [31m1[m;
+  }
+  [33mreturn[m [31m0[m;
+}
+[1m[34m~                                                                               [19;1H~                                                                               [20;1H~                                                                               [21;1H~                                                                               [22;1H~                                                                               [23;1H~                                                                               [m[24;63H1,1[11CAll[1;1H[?25h[?1000l[?1002h[?25l[24;64H6,11[16;11H[?25h[?25l[24;53H:[16;11H[24;1H[K[24;1H:[?2004h[?25hw[?25l[?25hq[?25l[?25h[?25l[?1002l[?2004l"void-pointers.c" 17L, 485C written[23;2t[23;1t[22;2t[22;1t[23;2t[23;1t
+[?2004l[?1l>[?25h[?1049l[23;0;0tpsammon1@remote03:~/cs220/labs/lab4/exercises/5-void-pointers$ vim void-pointers.c[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccd ~/cs220/labs/lab4/exercises/5-void-pointers[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[5P./cast-types
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmake -f ../Makefile
+gcc  -g -Wall -Wextra -Wno-unused-parameter -std=c11 -lm  void-pointers.c   -o void-pointers
+psammon1@remote03:~/cs220/labs/lab4/exercises/5-void-pointers$ ./vio[K[Koid-pointers
+void pointer p = 0x7fffac2be73b, pointing at char a
+void pointer p = 0x7fffac2be73c, pointing at char b
+void pointer p = 0x7fffac2be73d, pointing at char c
+void pointer p = 0x7fffac2be73e, pointing at char d
+void pointer p = 0x7fffac2be73f, pointing at char e
+void pointer p = 0x7fffac2be720, pointing at int 1
+void pointer p = 0x7fffac2be724, pointing at int 2
+void pointer p = 0x7fffac2be728, pointing at int 3
+void pointer p = 0x7fffac2be72c, pointing at int 4
+void pointer p = 0x7fffac2be730, pointing at int 5
+psammon1@remote03:~/cs220/labs/lab4/exercises/5-void-pointers$ ./void-pointersmake -f ../Makefile[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cvim void-pointers.c
+[?1000h[?2004h[?1049h[22;0;0t[?1h=[?2004h[1;24r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[24;1H"void-pointers.c" 17L, 485C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1H[35m#include [m[31m<stdio.h>[m
+
+[32mint[m main() {
+  [32mchar[m chars[] = { [31m'a'[m, [31m'b'[m, [31m'c'[m, [31m'd'[m, [31m'e'[m };
+  [32mint[m ints[] = { [31m1[m, [31m2[m, [31m3[m, [31m4[m, [31m5[m };
+  [32mvoid[m *p = chars;
+  [33mfor[m ([32munsigned[m i = [31m0[m; i < [33msizeof[m(chars)/[33msizeof[m(chars[[31m0[m]); i++) {
+    printf([31m"void pointer p = [m[35m%p[m[31m, pointing at char [m[35m%c\n[m[31m"[m, p, *([32mchar[m *)p);
+    p = ([32mchar[m *)p + [31m1[m;
+  }
+  p = ints;
+  [33mfor[m ([32munsigned[m i = [31m0[m; i < [33msizeof[m(ints)/[33msizeof[m(ints[[31m0[m]); i++) {
+    printf([31m"void pointer p = [m[35m%p[m[31m, pointing at int [m[35m%d\n[m[31m"[m, p, *([32mint[m *)p);
+    p = ([32mint[m *)p + [31m1[m;
+  }
+  [33mreturn[m [31m0[m;
+}
+[1m[34m~                                                                               [19;1H~                                                                               [20;1H~                                                                               [21;1H~                                                                               [22;1H~                                                                               [23;1H~                                                                               [m[24;63H16,11[9CAll[16;11H[?25h[?1000l[?1002h[?25l[24;53H:[16;11H[24;1H[K[24;1H:[?2004h[?25hw[?25l[?25hq[?25l[?25h[?25l[?1002l[?2004l"void-pointers.c" 17L, 485C written[23;2t[23;1t[22;2t[22;1t[23;2t[23;1t
+[?2004l[?1l>[?25h[?1049l[23;0;0tpsammon1@remote03:~/cs220/labs/lab4/exercises/5-void-pointers$ vim void-pointers.c[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2P./void-pointers
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmake -f ../Makefile[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cvim void-pointers.c[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccd ~/cs220/labs/lab4/exercises/5-void-pointers[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K6-in-voids
+psammon1@remote03:~/cs220/labs/lab4/exercises/6-in-voids$ vim in-voids.c
+[?1000h[?2004h[?1049h[22;0;0t[?1h=[?2004h[1;24r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[24;1H"in-voids.c" 48L, 1118C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1H[35m#include [m[31m<stdio.h>[m
+
+[32mtypedef[m [32mstruct[m {
+  [32mconst[m [32mchar[m *exp;
+  [32mvoid[m *p;
+} ExpPointer;
+
+[32mint[m main() {
+
+  [32mchar[m chars[] = { [31m'a'[m, [31m'b'[m, [31m'c'[m, [31m'd'[m, [31m'e'[m };
+  [32mint[m ints[] = { [31m1[m, [31m2[m, [31m3[m, [31m4[m, [31m5[m };
+  ExpPointer questions[] = {
+    { [31m"ints[2]"[m, &ints[[31m2[m] },
+    { [31m"chars[3]"[m, &chars[[31m3[m] },
+    { [31m"ints[4]"[m, &ints[[31m4[m] },
+    { [31m"chars[1]"[m, &chars[[31m1[m] },
+    { [31m"chars[4]"[m, &chars[[31m4[m] },
+    { [31m"ints[1]"[m, &ints[[31m1[m] },
+  };
+  [33mfor[m ([32munsigned[m i = [31m0[m;[21;8H!feof([31mstdin[m) && i < [33msizeof[m(questions)/[33msizeof[m(questions[[31m0[m]);[22;8Hi++) {
+    ExpPointer q = questions[i];[24;63H1,1[11CTop[1;1H[?25h[?1000l[?1002h[?25l[1;23r[1;1H[3M[1;24r[21;5H[32mint[m isOk = [31m0[m;
+    [33mdo[m {[23;7Hprintf([31m"chars[] is at [m[35m%p[m[31m; ints[] ints at [m[35m%p\n[m[31m"[m, chars, ints);[24;1H[K[24;63H9,0-1[9C12%[6;1H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;7Hprintf([31m"enter pointer to [m[35m%s[m[31m: "[m, q.exp);[22;7Hfflush([31mstdout[m);[23;7H[32mvoid[m *p;[24;63H[K[24;63H12,1[10C24%[6;1H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;7H[32mint[m nOk = scanf([31m"[m[35m%p[m[31m"[m, &p);[22;7H[33mif[m (nOk == [31m1[m) {[23;9HisOk = (p == q.p);[24;63H[K[24;63H15,1[10C36%[6;1H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;9Hprintf([31m"[m[35m%s\n[m[31m"[m, isOk ? [31m"ok"[m : [31m"not ok"[m);[22;7H}[23;7H[33melse[m [33mif[m (nOk == [31mEOF[m) {[24;63H[K[24;63H18,1[10C48%[6;1H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;9H[33mbreak[m;[22;7H}[23;7H[33melse[m {[24;63H[K[24;63H21,1[10C60%[6;1H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;9Hprintf([31m"bad input: enter hex pointer value[m[35m\n[m[31m"[m);[22;7H}[23;7H[32mint[m c = getchar();[24;63H[K[24;63H24,1[10C72%[6;1H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;7H[33mwhile[m (c != [35m'\n'[m && c != [31mEOF[m) { [34m//waste line[m[22;9Hc = getchar();[23;7H}[24;63H[K[24;63H27,1[10C84%[6;1H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;5H} [33mwhile[m (!isOk);
+  }
+  [33mreturn[m [31m0[m;[24;63H[K[24;63H30,1[10C96%[6;1H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;1H}
+[1m[34m~                                                                               [23;1H~                                                                               [m[24;63H[K[24;63H33,1[10CBot[6;1H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;1H[1m[34m~                                                                               [22;1H~                                                                               [23;1H~                                                                               [m[24;63H[K[24;63H36,1[10CBot[6;1H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;1H[1m[34m~                                                                               [22;1H~                                                                               [23;1H~                                                                               [m[24;63H[K[24;63H39,1[10CBot[6;1H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;1H[1m[34m~                                                                               [22;1H~                                                                               [23;1H~                                                                               [m[24;63H[K[24;63H42,1[10CBot[6;1H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;1H[1m[34m~                                                                               [22;1H~                                                                               [23;1H~                                                                               [m[24;63H[K[24;63H45,1[10CBot[6;1H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;1H[1m[34m~                                                                               [22;1H~                                                                               [23;1H~                                                                               [m[24;63H[K[24;63H48,1[10CBot[6;1H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;1H[1m[34m~                                                                               [22;1H~                                                                               [23;1H~                                                                               [m[24;63H[K[24;63H48,1[10CBot[3;1H[?25h[?25l[1;23r[1;1H[2M[1;24r[22;1H[1m[34m~                                                                               [23;1H~                                                                               [m[24;63H[K[24;63H48,1[10CBot[1;1H[?25h[?25l[1;23r[1;1H[3L[1;24r[1;5H} [33mwhile[m (!isOk);
+  }
+  [33mreturn[m [31m0[m;[24;63H[K[24;63H48,1[10CBot[4;1H[?25h[?25l[1;23r[1;1H[3L[1;24r[1;7H[33mwhile[m (c != [35m'\n'[m && c != [31mEOF[m) { [34m//waste line[m[2;9Hc = getchar();[3;7H}[24;63H[K[24;63H48,1[10CBot[7;1H[?25h[?25l[1;23r[1;1H[3L[1;24r[1;9Hprintf([31m"bad input: enter hex pointer value[m[35m\n[m[31m"[m);[2;7H}[3;7H[32mint[m c = getchar();[24;63H[K[24;63H48,1[10CBot[10;1H[?25h[?25l[1;23r[1;1H[3L[1;24r[1;9H[33mbreak[m;[2;7H}[3;7H[33melse[m {[24;63H[K[24;63H48,1[10CBot[13;1H[?25h[?25l[1;23r[1;1H[3L[1;24r[1;9Hprintf([31m"[m[35m%s\n[m[31m"[m, isOk ? [31m"ok"[m : [31m"not ok"[m);[2;7H}[3;7H[33melse[m [33mif[m (nOk == [31mEOF[m) {[24;63H[K[24;63H48,1[10CBot[16;1H[?25h[?25l[1;23r[1;1H[3L[1;24r[1;7H[32mint[m nOk = scanf([31m"[m[35m%p[m[31m"[m, &p);[2;7H[33mif[m (nOk == [31m1[m) {[3;9HisOk = (p == q.p);[24;63H[K[24;63H48,1[10CBot[19;1H[?25h[?25l[1;23r[1;1H[3L[1;24r[1;7Hprintf([31m"enter pointer to [m[35m%s[m[31m: "[m, q.exp);[2;7Hfflush([31mstdout[m);[3;7H[32mvoid[m *p;[24;63H[K[24;63H48,1[10CBot[22;1H[?25h[?25l[1;23r[1;1H[3L[1;24r[1;5H[32mint[m isOk = [31m0[m;
+    [33mdo[m {[3;7Hprintf([31m"chars[] is at [m[35m%p[m[31m; ints[] ints at [m[35m%p\n[m[31m"[m, chars, ints);[24;63H[K[24;63H41,1[10C92%[18;1H[?25h[?25l[1;23r[1;1H[3L[1;24r[1;8H!feof([31mstdin[m) && i < [33msizeof[m(questions)/[33msizeof[m(questions[[31m0[m]);[2;8Hi++) {
+    ExpPointer q = questions[i];[24;63H[K[24;63H38,1[10C80%[18;1H[?25h[?25l[1;23r[1;1H[3L[1;24r[1;5H{ [31m"ints[1]"[m, &ints[[31m1[m] },
+  };
+  [33mfor[m ([32munsigned[m i = [31m0[m;[24;63H[K[24;63H35,1[10C68%[18;1H[?25h[?25l[1;23r[1;1H[3L[1;24r[1;5H{ [31m"ints[4]"[m, &ints[[31m4[m] },
+    { [31m"chars[1]"[m, &chars[[31m1[m] },
+    { [31m"chars[4]"[m, &chars[[31m4[m] },[24;63H[K[24;63H32,1[10C56%[18;1H[?25h[?25l[1;23r[1;1H[3L[1;24r[1;3HExpPointer questions[] = {
+    { [31m"ints[2]"[m, &ints[[31m2[m] },
+    { [31m"chars[3]"[m, &chars[[31m3[m] },[24;63H[K[24;63H29,1[10C44%[18;1H[?25h[?25l[1;23r[1;1H[3L[1;24r[2;3H[32mchar[m chars[] = { [31m'a'[m, [31m'b'[m, [31m'c'[m, [31m'd'[m, [31m'e'[m };
+  [32mint[m ints[] = { [31m1[m, [31m2[m, [31m3[m, [31m4[m, [31m5[m };[24;63H[K[24;63H26,1[10C32%[18;1H[?25h[?25l[1;23r[1;1H[3L[1;24r[1;1H} ExpPointer;
+
+[32mint[m main() {[24;63H[K[24;63H23,1[10C20%[18;1H[?25h[?25l[1;23r[1;1H[3L[1;24r[1;1H[32mtypedef[m [32mstruct[m {
+  [32mconst[m [32mchar[m *exp;
+  [32mvoid[m *p;[24;63H[K[24;63H20,1[11C8%[18;1H[?25h[?25l[1;23r[1;1H[2L[1;24r[1;1H[35m#include [m[31m<stdio.h>[m[24;63H[K[24;63H18,1[10CTop[18;1H[?25h[?25l[?25h[?25l[?25h[?25l[1;23r[23;1H
+[1;24r[23;5H[32mint[m isOk = [31m0[m;[24;63H[K[24;63H19,4[11C4%[18;4H[?25h[?25l[24;53H:[18;4H[24;53H[K[24;1H:[?2004h[?25hw[?25l[?25hq[?25l[?25h[?25l[?1002l[?2004l"in-voids.c" 48L, 1118C written[23;2t[23;1t[22;2t[22;1t[23;2t[23;1t
+[?2004l[?1l>[?25h[?1049l[23;0;0tpsammon1@remote03:~/cs220/labs/lab4/exercises/6-in-voids$ vim in-voids.ccd ~/cs220/labs/lab4/exercises/6-in-voids[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[3Pvim void-pointers.c
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[4P./void-pointersmake -f ../Makefile
+gcc  -g -Wall -Wextra -Wno-unused-parameter -std=c11 -lm  in-voids.c   -o in-voids
+psammon1@remote03:~/cs220/labs/lab4/exercises/6-in-voids$ ./in-voids
+chars[] is at 0x7ffce876c6cb; ints[] ints at 0x7ffce876c6b0
+enter pointer to ints[2]: ^C
+psammon1@remote03:~/cs220/labs/lab4/exercises/6-in-voids$ ./in-voidsmake -f ../Makefile[5Pvim in-voids.c
+[?1000h[?2004h[?1049h[22;0;0t[?1h=[?2004h[1;24r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[24;1H"in-voids.c" 48L, 1118C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[2;1H[32mtypedef[m [32mstruct[m {
+  [32mconst[m [32mchar[m *exp;
+  [32mvoid[m *p;
+} ExpPointer;
+
+[32mint[m main() {
+
+  [32mchar[m chars[] = { [31m'a'[m, [31m'b'[m, [31m'c'[m, [31m'd'[m, [31m'e'[m };
+  [32mint[m ints[] = { [31m1[m, [31m2[m, [31m3[m, [31m4[m, [31m5[m };
+  ExpPointer questions[] = {
+    { [31m"ints[2]"[m, &ints[[31m2[m] },
+    { [31m"chars[3]"[m, &chars[[31m3[m] },
+    { [31m"ints[4]"[m, &ints[[31m4[m] },
+    { [31m"chars[1]"[m, &chars[[31m1[m] },
+    { [31m"chars[4]"[m, &chars[[31m4[m] },
+    { [31m"ints[1]"[m, &ints[[31m1[m] },
+  };
+  [33mfor[m ([32munsigned[m i = [31m0[m;[20;8H!feof([31mstdin[m) && i < [33msizeof[m(questions)/[33msizeof[m(questions[[31m0[m]);[21;8Hi++) {
+    ExpPointer q = questions[i];
+    [32mint[m isOk = [31m0[m;[24;63H19,4[11C4%[18;4H[?25h[?1000l[?1002h[?25l[1;23r[1;1H[3M[1;24r[21;5H[33mdo[m {[22;7Hprintf([31m"chars[] is at [m[35m%p[m[31m; ints[] ints at [m[35m%p\n[m[31m"[m, chars, ints);[23;7Hprintf([31m"enter pointer to [m[35m%s[m[31m: "[m, q.exp);[24;1H[K[24;63H19,4[10C16%[15;4H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;7Hfflush([31mstdout[m);[22;7H[32mvoid[m *p;[23;7H[32mint[m nOk = scanf([31m"[m[35m%p[m[31m"[m, &p);[24;63H[K[24;63H19,4[10C28%[12;4H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;7H[33mif[m (nOk == [31m1[m) {[22;9HisOk = (p == q.p);[23;9Hprintf([31m"[m[35m%s\n[m[31m"[m, isOk ? [31m"ok"[m : [31m"not ok"[m);[24;63H[K[24;63H19,4[10C40%[9;4H[?25h[?25l[1;23r[1;1H[3L[1;24r[1;1H[32mint[m main() {
+
+  [32mchar[m chars[] = { [31m'a'[m, [31m'b'[m, [31m'c'[m, [31m'd'[m, [31m'e'[m };[24;63H[K[24;63H19,4[10C28%[12;4H[?25h[?25l[1;23r[1;1H[3L[1;24r[1;3H[32mvoid[m *p;
+} ExpPointer;[24;63H[K[24;63H19,4[10C16%[15;4H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;7Hfflush([31mstdout[m);[22;7H[32mvoid[m *p;[23;7H[32mint[m nOk = scanf([31m"[m[35m%p[m[31m"[m, &p);[24;63H[K[24;63H19,4[10C28%[12;4H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;7H[33mif[m (nOk == [31m1[m) {[22;9HisOk = (p == q.p);[23;9Hprintf([31m"[m[35m%s\n[m[31m"[m, isOk ? [31m"ok"[m : [31m"not ok"[m);[24;63H[K[24;63H19,4[10C40%[9;4H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;7H}[22;7H[33melse[m [33mif[m (nOk == [31mEOF[m) {[23;9H[33mbreak[m;[24;63H[K[24;63H19,4[10C52%[6;4H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;7H}[22;7H[33melse[m {[23;9Hprintf([31m"bad input: enter hex pointer value[m[35m\n[m[31m"[m);[24;63H[K[24;63H22,4[10C64%[6;4H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;7H}[22;7H[32mint[m c = getchar();[23;7H[33mwhile[m (c != [35m'\n'[m && c != [31mEOF[m) { [34m//waste line[m[24;63H[K[24;63H25,4[10C76%[6;4H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;9Hc = getchar();[22;7H}
+    } [33mwhile[m (!isOk);[24;63H[K[24;63H28,4[10C88%[6;4H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;3H}
+  [33mreturn[m [31m0[m;
+}[24;63H[K[24;63H31,4[10CBot[6;4H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;1H[1m[34m~                                                                               [22;1H~                                                                               [23;1H~                                                                               [m[24;63H[K[24;63H34,4[10CBot[6;4H[?25h[?25l[1;23r[1;1H[3L[1;24r[1;7Hprintf([31m"chars[] is at [m[35m%p[m[31m; ints[] ints at [m[35m%p\n[m[31m"[m, chars, ints);[2;7Hprintf([31m"enter pointer to [m[35m%s[m[31m: "[m, q.exp);[3;7Hfflush([31mstdout[m);[24;63H[K[24;63H34,4[10CBot[9;4H[?25h[?25l[1;23r[1;1H[3L[1;24r[1;5HExpPointer q = questions[i];
+    [32mint[m isOk = [31m0[m;
+    [33mdo[m {[24;63H[K[24;63H34,4[10C88%[12;4H[?25h[?25l[1;23r[1;1H[3L[1;24r[1;3H[33mfor[m ([32munsigned[m i = [31m0[m;[2;8H!feof([31mstdin[m) && i < [33msizeof[m(questions)/[33msizeof[m(questions[[31m0[m]);[3;8Hi++) {[24;63H[K[24;63H34,4[10C76%[15;4H[?25h[?25l[1;23r[1;1H[3L[1;24r[1;5H{ [31m"chars[4]"[m, &chars[[31m4[m] },
+    { [31m"ints[1]"[m, &ints[[31m1[m] },
+  };[24;63H[K[24;63H34,4[10C64%[18;4H[?25h[?25l[1;23r[1;1H[3L[1;24r[1;5H{ [31m"chars[3]"[m, &chars[[31m3[m] },
+    { [31m"ints[4]"[m, &ints[[31m4[m] },
+    { [31m"chars[1]"[m, &chars[[31m1[m] },[24;63H[K[24;63H31,4[10C52%[18;4H[?25h[?25l[1;23r[1;1H[3L[1;24r[1;3H[32mint[m ints[] = { [31m1[m, [31m2[m, [31m3[m, [31m4[m, [31m5[m };
+  ExpPointer questions[] = {
+    { [31m"ints[2]"[m, &ints[[31m2[m] },[24;63H[K[24;63H28,4[10C40%[18;4H[?25h[?25l[1;23r[1;1H[3L[1;24r[1;1H[32mint[m main() {
+
+  [32mchar[m chars[] = { [31m'a'[m, [31m'b'[m, [31m'c'[m, [31m'd'[m, [31m'e'[m };[24;63H[K[24;63H25,4[10C28%[18;4H[?25h[?25l[1;23r[1;1H[3L[1;24r[1;3H[32mvoid[m *p;
+} ExpPointer;[24;63H[K[24;63H22,4[10C16%[18;4H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;7Hfflush([31mstdout[m);[22;7H[32mvoid[m *p;[23;7H[32mint[m nOk = scanf([31m"[m[35m%p[m[31m"[m, &p);[24;63H[K[24;63H22,4[10C28%[15;4H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;7H[33mif[m (nOk == [31m1[m) {[22;9HisOk = (p == q.p);[23;9Hprintf([31m"[m[35m%s\n[m[31m"[m, isOk ? [31m"ok"[m : [31m"not ok"[m);[24;63H[K[24;63H22,4[10C40%[12;4H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;7H}[22;7H[33melse[m [33mif[m (nOk == [31mEOF[m) {[23;9H[33mbreak[m;[24;63H[K[24;63H22,4[10C52%[9;4H[?25h[?25l[1;23r[1;1H[3L[1;24r[1;3H[32mint[m ints[] = { [31m1[m, [31m2[m, [31m3[m, [31m4[m, [31m5[m };
+  ExpPointer questions[] = {
+    { [31m"ints[2]"[m, &ints[[31m2[m] },[24;63H[K[24;63H22,4[10C40%[12;4H[?25h[?25l[1;23r[1;1H[3L[1;24r[1;1H[32mint[m main() {
+
+  [32mchar[m chars[] = { [31m'a'[m, [31m'b'[m, [31m'c'[m, [31m'd'[m, [31m'e'[m };[24;63H[K[24;63H22,4[10C28%[15;4H[?25h[?25l[1;23r[1;1H[3L[1;24r[1;3H[32mvoid[m *p;
+} ExpPointer;[24;63H[K[24;63H22,4[10C16%[18;4H[?25h[?25l[1;23r[1;1H[3L[1;24r[2;1H[32mtypedef[m [32mstruct[m {
+  [32mconst[m [32mchar[m *exp;[24;63H[K[24;63H19,4[11C4%[18;4H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;5H[33mdo[m {[22;7Hprintf([31m"chars[] is at [m[35m%p[m[31m; ints[] ints at [m[35m%p\n[m[31m"[m, chars, ints);[23;7Hprintf([31m"enter pointer to [m[35m%s[m[31m: "[m, q.exp);[24;63H[K[24;63H19,4[10C16%[15;4H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;7Hfflush([31mstdout[m);[22;7H[32mvoid[m *p;[23;7H[32mint[m nOk = scanf([31m"[m[35m%p[m[31m"[m, &p);[24;63H[K[24;63H19,4[10C28%[12;4H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;7H[33mif[m (nOk == [31m1[m) {[22;9HisOk = (p == q.p);[23;9Hprintf([31m"[m[35m%s\n[m[31m"[m, isOk ? [31m"ok"[m : [31m"not ok"[m);[24;63H[K[24;63H19,4[10C40%[9;4H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;7H}[22;7H[33melse[m [33mif[m (nOk == [31mEOF[m) {[23;9H[33mbreak[m;[24;63H[K[24;63H19,4[10C52%[6;4H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;7H}[22;7H[33melse[m {[23;9Hprintf([31m"bad input: enter hex pointer value[m[35m\n[m[31m"[m);[24;63H[K[24;63H22,4[10C64%[6;4H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;7H}[22;7H[32mint[m c = getchar();[23;7H[33mwhile[m (c != [35m'\n'[m && c != [31mEOF[m) { [34m//waste line[m[24;63H[K[24;63H25,4[10C76%[6;4H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;9Hc = getchar();[22;7H}
+    } [33mwhile[m (!isOk);[24;63H[K[24;63H28,4[10C88%[6;4H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;3H}
+  [33mreturn[m [31m0[m;
+}[24;63H[K[24;63H31,4[10CBot[6;4H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;1H[1m[34m~                                                                               [22;1H~                                                                               [23;1H~                                                                               [m[24;63H[K[24;63H34,4[10CBot[6;4H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;1H[1m[34m~                                                                               [22;1H~                                                                               [23;1H~                                                                               [m[24;63H[K[24;63H37,4[10CBot[6;4H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;1H[1m[34m~                                                                               [22;1H~                                                                               [23;1H~                                                                               [m[24;63H[K[24;63H40,4[10CBot[6;4H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;1H[1m[34m~                                                                               [22;1H~                                                                               [23;1H~                                                                               [m[24;63H[K[24;63H43,4[10CBot[6;4H[?25h[?25l[24;53H~@k[6;4H[24;53H   [6;4H[1;23r[1;1H[L[1;24r[1;7H}[24;63H[K[24;63H42,4[10CBot[6;4H[?25h[?25l[24;53H:[6;4H[24;53H[K[24;1H:[?2004h[?25hw[?25l[?25hq[?25l[?25h[?25l[?1002l[?2004l"in-voids.c" 48L, 1118C written[23;2t[23;1t[22;2t[22;1t[23;2t[23;1t
+[?2004l[?1l>[?25h[?1049l[23;0;0tpsammon1@remote03:~/cs220/labs/lab4/exercises/6-in-voids$ vim in-voids.c[4P./in-voidsvim in-voids.c[4P./in-voidsvim in-voids.c[4P./in-voidsvim in-voids.c[4P./in-voids
+chars[] is at 0x7ffe1797f61b; ints[] ints at 0x7ffe1797f600
+enter pointer to ints[2]: 7ffe178 97f608
+ok
+chars[] is at 0x7ffe1797f61b; ints[] ints at 0x7ffe1797f600
+enter pointer to chars[3]: 7ffe1797f61e
+ok
+chars[] is at 0x7ffe1797f61b; ints[] ints at 0x7ffe1797f600
+enter pointer to ints[4]: 7ffe1797f60c
+not ok
+chars[] is at 0x7ffe1797f61b; ints[] ints at 0x7ffe1797f600
+enter pointer to ints[4]: 7ffe1797f1 620  10
+ok
+chars[] is at 0x7ffe1797f61b; ints[] ints at 0x7ffe1797f600
+enter pointer to chars[1]: 7ffe1797f61c
+ok
+chars[] is at 0x7ffe1797f61b; ints[] ints at 0x7ffe1797f600
+enter pointer to chars[4]: 7ffe1797f61f
+ok
+chars[] is at 0x7ffe1797f61b; ints[] ints at 0x7ffe1797f600
+enter pointer to ints[1]: 7ffe1797f604
+ok
+psammon1@remote03:~/cs220/labs/lab4/exercises/6-in-voids$ exit
+psammon1@remote03:~/cs220/labs/lab4/exercises/4-cast-types$ exit
+
+Script done on 2020-09-24 12:11:40-04:00 [COMMAND_EXIT_CODE="0"]
