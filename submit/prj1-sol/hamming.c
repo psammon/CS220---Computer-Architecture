@@ -13,7 +13,7 @@ static inline unsigned
 get_bit(HammingWord word, int bitIndex)
 {
   assert(bitIndex > 0);
-  return (1 << (bitIndex)) & word;
+  return ((1 << (bitIndex)) & word) != 0;
 }
 
 /** Return word with bit at bitIndex in word set to bitValue. */
@@ -45,7 +45,7 @@ is_parity_position(int bitIndex)
 {
   assert(bitIndex > 0);
   if(bitIndex & (bitIndex-1) == 0)
-	  return 1
+	  return 1;
   return 0;
 }
 
@@ -88,14 +88,14 @@ hamming_encode(HammingWord data, unsigned nParityBits)
 	  {
 		  if(!is_parity_position(i))
 		  {
-			 int temp = get_bit(word, j);
+			 int temp = get_bit(data, j);
 			 encoded = set_bit(encoded, i, temp);
 			 j++;
 		  }
 	  }
 
  }
-  for(int i = 0; i <= nBits; i++)
+  for(int i = 1; i <= nBits; i++)
   {
 	  if(is_parity_position(i))
 	  {
@@ -118,7 +118,7 @@ hamming_decode(HammingWord encoded, unsigned nParityBits,
   HammingWord decoded = 0;
   int nBits = get_n_encoded_bits(nParityBits), j = 1, syndrome = 0;
 
-  for(int i = 0; i <= nBits; i++)
+  for(int i = 1; i <= nBits; i++)
   {
 	  if(is_parity_position(i))
 	  {
@@ -133,7 +133,7 @@ hamming_decode(HammingWord encoded, unsigned nParityBits,
 
   while(j <= nBits-nParityBits)
   {
-	  for(int i = 0; i <= nBits; i++)
+	  for(int i = 1; i <= nBits; i++)
 	  {
 		  if(!is_parity_position(i))
 		  {
