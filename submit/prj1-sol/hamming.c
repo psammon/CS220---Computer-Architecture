@@ -13,8 +13,7 @@ static inline unsigned
 get_bit(HammingWord word, int bitIndex)
 {
   assert(bitIndex > 0);
-  //@TODO
-  return 0;
+  return (1 << (bitIndex)) & word;
 }
 
 /** Return word with bit at bitIndex in word set to bitValue. */
@@ -23,8 +22,8 @@ set_bit(HammingWord word, int bitIndex, unsigned bitValue)
 {
   assert(bitIndex > 0);
   assert(bitValue == 0 || bitValue == 1);
-  //@TODO
-  return 0;
+  word ^= (bitValue << (bitIndex-1));
+  return word;
 }
 
 /** Given a Hamming code with nParityBits, return 2**nParityBits - 1,
@@ -34,8 +33,7 @@ set_bit(HammingWord word, int bitIndex, unsigned bitValue)
 static inline unsigned
 get_n_encoded_bits(unsigned nParityBits)
 {
-  //@TODO
-  return 0;
+  return ((1 << nParityBits) -1);
 }
 
 /** Return non-zero if bitIndex indexes a bit which will be used for a
@@ -46,7 +44,8 @@ static inline int
 is_parity_position(int bitIndex)
 {
   assert(bitIndex > 0);
-  //@TODO
+  if(bitIndex & (bitIndex-1) == 0)
+	  return 1
   return 0;
 }
 
@@ -59,8 +58,18 @@ static int
 compute_parity(HammingWord word, int bitIndex, unsigned nBits)
 {
   assert(bitIndex > 0);
-  //@TODO
-  return 0;
+  int parity = 0;
+  
+  for(int i = 1; i <= nBits; i++)
+  {
+	  if((i & bitIndex) == bitIndex)
+	  {
+		if(get_bit(word, i) == 1)
+		 	 parity++;
+	  }
+  }	
+
+  return parity%2;
 }
 
 /** Encode data using nParityBits Hamming code parity bits.
@@ -70,7 +79,9 @@ compute_parity(HammingWord word, int bitIndex, unsigned nBits)
 HammingWord
 hamming_encode(HammingWord data, unsigned nParityBits)
 {
-  //@TODO
+  HammingWord encoded = 0;
+  unsigned val = 0;
+
   return 0;
 }
 
