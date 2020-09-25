@@ -22,7 +22,7 @@ set_bit(HammingWord word, int bitIndex, unsigned bitValue)
 {
   assert(bitIndex > 0);
   assert(bitValue == 0 || bitValue == 1);
-  word ^= (bitValue << (bitIndex-1));
+  word |= (bitValue << (bitIndex-1));
   return word;
 }
 
@@ -80,9 +80,30 @@ HammingWord
 hamming_encode(HammingWord data, unsigned nParityBits)
 {
   HammingWord encoded = 0;
-  unsigned val = 0;
+  int nBits = get_n_encoded_bits(nParityBits), j = 1;
 
-  return 0;
+  while(j <= nBits - nParityBits)
+  {
+	  for(int i  = 1; i <= nBits; i++)
+	  {
+		  if(!is_parity_position(i))
+		  {
+			 int temp = get_bit(word, j);
+			 encoded = set_bit(encoded, i, temp);
+			 j++;
+		  }
+	  }
+
+ }
+  for(int i = 0; i <= nBits; i++)
+  {
+	  if(is_parity_position(i))
+	  {
+		  int temp = compute_parity(encoded, i, nBits);
+		  encoded = set_bit(encoded, i, temp);
+	  }
+  }
+  return encoded;
 }
 
 /** Decode encoded using nParityBits Hamming code parity bits.
@@ -94,6 +115,35 @@ HammingWord
 hamming_decode(HammingWord encoded, unsigned nParityBits,
                            int *hasError)
 {
-  //@TODO
-  return 0;
+  HammingWord decoded = 0;
+  int nBits = get_n_encoded_bits(nParityBits), j = 1, syndrome = 0;
+
+  for(int i = 0; i <= nBits; i++)
+  {
+	  if(is_parity_position(i))
+	  {
+		  int par = compute_parity(encoded, i, nBits);
+		  if(get_bit(encoded, i) != par)
+			  syndrome |= i;
+	  }
+  }
+
+  if(syndrome != 0)
+	  encoded ^= (1 << syndrome);
+
+  while(j <= nBits-nParityBits)
+  {
+	  for(int i = 0; i <= nBits; i++)
+	  {
+		  if(!is_parity_position(i))
+		  {
+			 int temp = get_bit(encoded, i);
+			 decoded = set_bit(decoded, j, temp);
+			 j++;
+		  }
+	  }
+
+  }
+
+  return decoded;
 }
