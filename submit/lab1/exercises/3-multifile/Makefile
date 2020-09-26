@@ -1,4 +1,5 @@
 PROJECT = quadr
+<<<<<<< HEAD
 SRC_FILES = main.c\
 	Makefile\
  	quadr.c\
@@ -11,11 +12,19 @@ LDFLAGS = -lm
 
 $(PROJECT):
 		quadr.o main.o
+=======
+
+CFLAGS = -g -Wall -std=c11
+LDFLAGS = 
+
+$(PROJECT):	quadr.o main.o
+>>>>>>> master
 		$(CC) $(LDFLAGS) quadr.o main.o -o $@
 
 clean:
 		rm -f *.o $(PROJECT) $(PROJECT).tar.gz
 
+<<<<<<< HEAD
 depend:
 		$(CC) -MM $(CPPFLAGS) *.c
 
@@ -28,3 +37,5 @@ $(PROJECT).tar.gz:	$(SRC_FILES)
 main.o: main.c quadr.h
 quadr.o: quadr.c quadr.h
 #auto generated dependencies
+=======
+>>>>>>> master
