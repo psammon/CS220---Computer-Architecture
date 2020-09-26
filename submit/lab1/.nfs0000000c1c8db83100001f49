@@ -1,239 +1,0 @@
-Script started on 2020-09-24 16:19:48-04:00 [TERM="xterm" TTY="/dev/pts/2" COLUMNS="93" LINES="49"]
-psammon1@remote07:~/i220a/submit/lab1$ git pushmerge lab4 -m 'merged lab4'[12Pcheckout masterpush[Kcommit -a -m 'completing lab4'status -s[Kmerge -m 'merged master' master[18Pcheckout lab4pull[Kcheckout masterommit -a -m 'completing lab4'status -s[Kmerge -m 'merged master' master[18Pcheckout lab4[4Pbranch -1[3Pcd ~/i220ascript -a lab4.LOGgit push -u origin lab4commit -m 'started lab4'add .[K[27@cp -pr ~/cs220/labs/lab4/exercises[C[C[14Pd ~/i220a/submit/lab4[2Pgit checkout -b lab4[10Pcd ~/i220asubmit/lab4[6@mkdir -p[C[C[C[C[C[C[C[C[C[C[C[Cgit checkout -b lab4[10Pcd ~/i220a[2Pgit pullcd ~/cs220s[C[C[C[C[C[C[C[C[6Pbashdel cast.types.cvim[C[C[C[C[C[C[C[C[C[C[C[C[Ccd ~/cs220/labs/lab4/exercises/4-cast-types[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./bad-types[Kcd ~/cs220/labs/lab4/exercises/4-cast-types[K[K[K[K[K[K[K[K[K[K[K[K1-pointers/[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K1/exercises
-psammon1@remote07:~/cs220/labs/lab1/exercises$ cd 1-hello/
-psammon1@remote07:~/cs220/labs/lab1/exercises/1-hello$ ls -l
-total 24
--rwxr-x--- 1 psammon1 psammon1 16608 Sep 24 15:49 hello
--rw-r----- 1 psammon1 psammon1    75 Sep 24 15:49 hello.c
-psammon1@remote07:~/cs220/labs/lab1/exercises/1-hello$ make hello
-make: 'hello' is up to date.
-psammon1@remote07:~/cs220/labs/lab1/exercises/1-hello$ ./hello
-hello world
-psammon1@remote07:~/cs220/labs/lab1/exercises/1-hello$ ./hellomake hello[5Pls -lcd 1-hello/~/cs220/labs/lab1/exercises/2-err/
-psammon1@remote07:~/cs220/labs/lab1/exercises/2-err$ make
-Makefile:2: *** missing separator.  Stop.
-psammon1@remote07:~/cs220/labs/lab1/exercises/2-err$ ls
-Makefile
-psammon1@remote07:~/cs220/labs/lab1/exercises/2-err$ ma[K[Kvim Makefile
-[?1000h[?2004h[?1049h[22;0;0t[?1h=[?2004h[1;49r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[49;1H"Makefile" 8L, 90C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1H[36mall:[m
-[1m[37m[41m                echo "hello $$USER"[m
-
-
-[33m.PHONY:[m[9Ccount-bin
-[36mcount-bin:[m
-[31m                cd /usr/bin ;
-                ls | wc -l[m
-[1m[34m~                                                                                            [10;1H~                                                                                            [11;1H~                                                                                            [12;1H~                                                                                            [13;1H~                                                                                            [14;1H~                                                                                            [15;1H~                                                                                            [16;1H~                                                                                            [17;1H~                                                                                            [18;1H~                                                                                            [19;1H~                                                                                            [20;1H~                                                                                            [21;1H~                                                                                            [22;1H~                                                                                            [23;1H~                                                                                            [24;1H~                                                                                            [25;1H~                                                                                            [26;1H~                                                                                            [27;1H~                                                                                            [28;1H~                                                                                            [29;1H~                                                                                            [30;1H~                                                                                            [31;1H~                                                                                            [32;1H~                                                                                            [33;1H~                                                                                            [34;1H~                                                                                            [35;1H~                                                                                            [36;1H~                                                                                            [37;1H~                                                                                            [38;1H~                                                                                            [39;1H~                                                                                            [40;1H~                                                                                            [41;1H~                                                                                            [42;1H~                                                                                            [43;1H~                                                                                            [44;1H~                                                                                            [45;1H~                                                                                            [46;1H~                                                                                            [47;1H~                                                                                            [48;1H~                                                                                            [m[49;76H1,1[11CAll[1;1H[?25h[?1000l[?1002h[?25l[49;66Hi[1;1H[49;66H [1;1H[49;1H[1m-- INSERT --[m[49;13H[K[49;76H1,1[11CAll[1;1H[?25h[?25l[49;76H2[2;1H[?25h[?25l[49;78H2[2;2H[?25h[?25l[49;78H3[2;3H[?25h[?25l[49;78H4-9[2;9H[?25h[?25l[49;78H5-17[2;17H[?25h[?25l[49;78H6-18[2;18H[?25h[?25l[49;78H5-17[2;17H[?25h[?25l[49;78H4-9 [2;9H[?25h[?25l[49;78H5-17[2;17H[?25h[?25l[49;78H4-9 [2;9H[?25h[?25l[1m[37m[41mecho "hello $$USER"[m[2;28H[K[49;78H3  [2;3H[?25h[?25l[49;78H2[2;2H[?25h[?25l[31m        echo "hello [m[36m$$[m[31mUSER"[m[49;78H1[2;1H[?25h[49;1H[K[2;1H[?25l[49;66H^[[2;1H[49;66H  [2;1H[49;76H2,1-8[9CAll[2;8H[?25h[?25l[49;66H:[2;8H[49;66H[K[49;1H:[?2004h[?25hq[?25l[?25hw[?25l[?25h[?25l[49;3H[K[49;3H[?25h[?25l[49;2H[K[49;2H[?25hw[?25l[?25hq[?25l[?25h[?25l[?1002l[?2004l"Makefile" 8L, 87C written[23;2t[23;1t[22;2t[22;1t[23;2t[23;1t
-[?2004l[?1l>[?25h[?1049l[23;0;0tpsammon1@remote07:~/cs220/labs/lab1/exercises/2-err$ vim Makefilels[Kmake
-echo "hello $USER"
-hello psammon1
-psammon1@remote07:~/cs220/labs/lab1/exercises/2-err$ makevim Makefile
-[?1000h[?2004h[?1049h[22;0;0t[?1h=[?2004h[1;49r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[49;1H"Makefile" 8L, 87C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1H[36mall:[m
-[31m        echo "hello [m[36m$$[m[31mUSER"[m
-
-
-[33m.PHONY:[m[9Ccount-bin
-[36mcount-bin:[m
-[31m                cd /usr/bin ;
-                ls | wc -l[m
-[1m[34m~                                                                                            [10;1H~                                                                                            [11;1H~                                                                                            [12;1H~                                                                                            [13;1H~                                                                                            [14;1H~                                                                                            [15;1H~                                                                                            [16;1H~                                                                                            [17;1H~                                                                                            [18;1H~                                                                                            [19;1H~                                                                                            [20;1H~                                                                                            [21;1H~                                                                                            [22;1H~                                                                                            [23;1H~                                                                                            [24;1H~                                                                                            [25;1H~                                                                                            [26;1H~                                                                                            [27;1H~                                                                                            [28;1H~                                                                                            [29;1H~                                                                                            [30;1H~                                                                                            [31;1H~                                                                                            [32;1H~                                                                                            [33;1H~                                                                                            [34;1H~                                                                                            [35;1H~                                                                                            [36;1H~                                                                                            [37;1H~                                                                                            [38;1H~                                                                                            [39;1H~                                                                                            [40;1H~                                                                                            [41;1H~                                                                                            [42;1H~                                                                                            [43;1H~                                                                                            [44;1H~                                                                                            [45;1H~                                                                                            [46;1H~                                                                                            [47;1H~                                                                                            [48;1H~                                                                                            [m[49;76H2,1-8[9CAll[2;8H[?25h[?1000l[?1002h[?25l[49;66H:[2;8H[49;1H[K[49;1H:[?2004h[?25hw[?25l[?25hq[?25l[?25h[?25l[?1002l[?2004l"Makefile" 8L, 87C written[23;2t[23;1t[22;2t[22;1t[23;2t[23;1t
-[?2004l[?1l>[?25h[?1049l[23;0;0tpsammon1@remote07:~/cs220/labs/lab1/exercises/2-err$ make count-bin
-cd /usr/bin ;
-ls | wc -l
-1
-psammon1@remote07:~/cs220/labs/lab1/exercises/2-err$ cd us[K[K/user[K[Kr/bin/[K ;
-psammon1@remote07:/usr/bin$ ls | wc -;[Kl
-4444
-psammon1@remote07:/usr/bin$ ls | wc -lcd /usr/bin ;make count-bin[2Pvim Makefile[8Pmakevim Makefilels[Kmakecd ~/cs220/labs/lab1/exercises/2-err/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./hello[Kcd ~/cs220/labs/lab1/exercises/2-err/
-psammon1@remote07:~/cs220/labs/lab1/exercises/2-err$ cd ~/cs220/labs/lab1/exercises/2-err/ls | wc -l[Kcd /usr/bin ;make count-bin[2Pvim Makefile
-[?1000h[?2004h[?1049h[22;0;0t[?1h=[?2004h[1;49r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[49;1H"Makefile" 8L, 87C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1H[36mall:[m
-[31m        echo "hello [m[36m$$[m[31mUSER"[m
-
-
-[33m.PHONY:[m[9Ccount-bin
-[36mcount-bin:[m
-[31m                cd /usr/bin ;
-                ls | wc -l[m
-[1m[34m~                                                                                            [10;1H~                                                                                            [11;1H~                                                                                            [12;1H~                                                                                            [13;1H~                                                                                            [14;1H~                                                                                            [15;1H~                                                                                            [16;1H~                                                                                            [17;1H~                                                                                            [18;1H~                                                                                            [19;1H~                                                                                            [20;1H~                                                                                            [21;1H~                                                                                            [22;1H~                                                                                            [23;1H~                                                                                            [24;1H~                                                                                            [25;1H~                                                                                            [26;1H~                                                                                            [27;1H~                                                                                            [28;1H~                                                                                            [29;1H~                                                                                            [30;1H~                                                                                            [31;1H~                                                                                            [32;1H~                                                                                            [33;1H~                                                                                            [34;1H~                                                                                            [35;1H~                                                                                            [36;1H~                                                                                            [37;1H~                                                                                            [38;1H~                                                                                            [39;1H~                                                                                            [40;1H~                                                                                            [41;1H~                                                                                            [42;1H~                                                                                            [43;1H~                                                                                            [44;1H~                                                                                            [45;1H~                                                                                            [46;1H~                                                                                            [47;1H~                                                                                            [48;1H~                                                                                            [m[49;76H2,1-8[9CAll[2;8H[?25h[?1000l[?1002h[?25l[49;76H7,2-16[7;16H[?25h[?25l[49;66H~@k[7;16H[49;66H   [7;8H[49;78H1-8 [7;8H[?25h[?25l[49;79H5-29[7;29H[?25h[?25l[49;66Hi[7;29H[49;66H [7;29H[49;1H[1m-- INSERT --[m[49;13H[K[49;76H7,15-29[7CAll[7;29H[?25h[?25l[49;79H6-30[7;30H[?25h[?25l[35m\[m[49;79H7-31[7;31H[?25h[49;1H[K[7;30H[?25l[49;66H^[[7;30H[49;66H  [7;31H[49;76H7,16-30[7CAll[7;30H[?25h[?25l[49;66H:[7;30H[49;66H[K[49;1H:[?2004h[?25hw[?25l[?25hq[?25l[?25h[?25l[?1002l[?2004l"Makefile" 8L, 88C written[23;2t[23;1t[22;2t[22;1t[23;2t[23;1t
-[?2004l[?1l>[?25h[?1049l[23;0;0tpsammon1@remote07:~/cs220/labs/lab1/exercises/2-err$ vim Makefilecd ~/cs220/labs/lab1/exercises/2-err/ls | wc -l[Kcd /usr/bin ;make count-bin
-cd /usr/bin ;\
-	ls | wc -l
-4444
-psammon1@remote07:~/cs220/labs/lab1/exercises/2-err$ make count-bin[2Pvim Makefilecd ~/cs220/labs/lab1/exercises/2-err/[K[K[K[K[K[K3-multifile/
-psammon1@remote07:~/cs220/labs/lab1/exercises/3-multifile$ cd ~/cs220/labs/lab1/exercises/3-multifile/[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[20Pmake count-bin
-[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2Pvim Makefile
-[?1000h[?2004h[?1049h[22;0;0t[?1h=[?2004h[1;49r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[49;1H"Makefile" 11L, 173C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1H[36mPROJECT [m= quadr
-
-[36mCFLAGS [m= -g -Wall -std=c11
-[36mLDFLAGS [m=
-
-[36m$(PROJECT):[m     quadr.o main.o
-[31m                [m[36m$(CC)[m[31m [m[36m$(LDFLAGS)[m[31m quadr.o main.o -o [m[36m$@
-
-clean:[m
-[31m                rm -f *.o [m[36m$(PROJECT)[m[31m [m[36m$(PROJECT)[m[31m.tar.gz[m
-
-[1m[34m~                                                                                            [13;1H~                                                                                            [14;1H~                                                                                            [15;1H~                                                                                            [16;1H~                                                                                            [17;1H~                                                                                            [18;1H~                                                                                            [19;1H~                                                                                            [20;1H~                                                                                            [21;1H~                                                                                            [22;1H~                                                                                            [23;1H~                                                                                            [24;1H~                                                                                            [25;1H~                                                                                            [26;1H~                                                                                            [27;1H~                                                                                            [28;1H~                                                                                            [29;1H~                                                                                            [30;1H~                                                                                            [31;1H~                                                                                            [32;1H~                                                                                            [33;1H~                                                                                            [34;1H~                                                                                            [35;1H~                                                                                            [36;1H~                                                                                            [37;1H~                                                                                            [38;1H~                                                                                            [39;1H~                                                                                            [40;1H~                                                                                            [41;1H~                                                                                            [42;1H~                                                                                            [43;1H~                                                                                            [44;1H~                                                                                            [45;1H~                                                                                            [46;1H~                                                                                            [47;1H~                                                                                            [48;1H~                                                                                            [m[49;76H11,0-1[8CAll[11;1H[?25h[?1000l[?1002h[?25l[49;66H:[11;1H[49;1H[K[49;1H:[?2004h[?25hw[?25l[?25hq[?25l[?25h[?25l[?1002l[?2004l"Makefile" 11L, 173C written[23;2t[23;1t[22;2t[22;1t[23;2t[23;1t
-[?2004l[?1l>[?25h[?1049l[23;0;0tpsammon1@remote07:~/cs220/labs/lab1/exercises/3-multifile$ make
-cc -g -Wall -std=c11   -c -o quadr.o quadr.c
-cc -g -Wall -std=c11   -c -o main.o main.c
-cc  quadr.o main.o -o quadr
-/usr/bin/ld: quadr.o: in function `quadratic_roots':
-/home/psammon1/cs220/labs/lab1/exercises/3-multifile/quadr.c:10: undefined reference to `sqrt'
-/usr/bin/ld: /home/psammon1/cs220/labs/lab1/exercises/3-multifile/quadr.c:11: undefined reference to `sqrt'
-collect2: error: ld returned 1 exit status
-make: *** [Makefile:7: quadr] Error 1
-psammon1@remote07:~/cs220/labs/lab1/exercises/3-multifile$ vimmakevim Makefile
-[?1000h[?2004h[?1049h[22;0;0t[?1h=[?2004h[1;49r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[49;1H"Makefile" 11L, 173C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1H[36mPROJECT [m= quadr
-
-[36mCFLAGS [m= -g -Wall -std=c11
-[36mLDFLAGS [m=
-
-[36m$(PROJECT):[m     quadr.o main.o
-[31m                [m[36m$(CC)[m[31m [m[36m$(LDFLAGS)[m[31m quadr.o main.o -o [m[36m$@
-
-clean:[m
-[31m                rm -f *.o [m[36m$(PROJECT)[m[31m [m[36m$(PROJECT)[m[31m.tar.gz[m
-
-[1m[34m~                                                                                            [13;1H~                                                                                            [14;1H~                                                                                            [15;1H~                                                                                            [16;1H~                                                                                            [17;1H~                                                                                            [18;1H~                                                                                            [19;1H~                                                                                            [20;1H~                                                                                            [21;1H~                                                                                            [22;1H~                                                                                            [23;1H~                                                                                            [24;1H~                                                                                            [25;1H~                                                                                            [26;1H~                                                                                            [27;1H~                                                                                            [28;1H~                                                                                            [29;1H~                                                                                            [30;1H~                                                                                            [31;1H~                                                                                            [32;1H~                                                                                            [33;1H~                                                                                            [34;1H~                                                                                            [35;1H~                                                                                            [36;1H~                                                                                            [37;1H~                                                                                            [38;1H~                                                                                            [39;1H~                                                                                            [40;1H~                                                                                            [41;1H~                                                                                            [42;1H~                                                                                            [43;1H~                                                                                            [44;1H~                                                                                            [45;1H~                                                                                            [46;1H~                                                                                            [47;1H~                                                                                            [48;1H~                                                                                            [m[49;76H11,0-1[8CAll[11;1H[?25h[?1000l[?1002h[?25l[49;76H4,10  [4;10H[?25h[?25l[49;66Hi[4;10H[49;66H [4;10H[49;1H[1m-- INSERT --[m[49;13H[K[49;76H4,10[10CAll[4;10H[?25h[?25l[49;79H1[4;11H[?25h[?25l-[49;79H2[4;12H[?25h[?25ll[49;79H3[4;13H[?25h[?25lm[49;79H4[4;14H[?25h[?25l[49;79H5[4;15H[?25h[?25l|[49;79H6[4;16H[?25h[?25l [49;79H5[4;15H[?25h[?25l\[49;79H6[4;16H[?25h[?25l[5;48r[5;1H[L[1;49r[4;15H[35m\
-          [m[49;76H[K[49;76H5,3-10[8CAll[5;10H[?25h[?25l[1C[35m       [m[49;78H4-17[5;17H[?25h[?25l[5;11H[K[49;78H3-10[5;10H[?25h[?25l-[49;78H4-11[5;11H[?25h[?25ll[49;78H5-12[5;12H[?25h[?25lc[49;78H6-13[5;13H[?25h[?25l [49;78H5-12[5;12H[?25h[?25l [49;78H4-11[5;11H[?25h[?25l[35m [m[49;78H3-10[5;10H[?25h[?25l[5;10H[K[49;78H2-9 [5;9H[?25h[?25l[5;2H[K[49;78H1  [5;1H[?25h[?25l[4;48r[48;1H
-[1;49r[4;1H[36mLDFLAGS [m= -lm \[48;1H[1m[34m~                                                                                            [m[49;76H[K[49;76H4,16[10CAll[4;16H[?25h[?25l [49;79H5[4;15H[?25h[49;1H[K[4;14H[?25l[49;66H^[[4;14H[49;66H  [4;15H[49;76H4,14[10CAll[4;14H[?25h[?25l[49;66H:[4;14H[49;66H[K[49;1H:[?2004h[?25hw[?25l[?25hq[?25l[?25h[?25l[?1002l[?2004l"Makefile" 11L, 178C written[23;2t[23;1t[22;2t[22;1t[23;2t[23;1t
-[?2004l[?1l>[?25h[?1049l[23;0;0tpsammon1@remote07:~/cs220/labs/lab1/exercises/3-multifile$ vim Makefile[8Pmake
-cc -lm   quadr.o main.o -o quadr
-psammon1@remote07:~/cs220/labs/lab1/exercises/3-multifile$ cd[K[Kcd ~/i220a/submit/lab1
-psammon1@remote07:~/i220a/submit/lab1$ git add .
-psammon1@remote07:~/i220a/submit/lab1$ git commit -m 'completed exercise 2'
-[prj1 19a2f62] completed exercise 2
- Committer: Patrick Sammon <psammon1@cs.binghamton.edu>
-Your name and email address were configured automatically based
-on your username and hostname. Please check that they are accurate.
-You can suppress this message by setting them explicitly. Run the
-following command and follow the instructions in your editor to edit
-your configuration file:
-
-    git config --global --edit
-
-After doing this, you may fix the identity used for this commit with:
-
-    git commit --amend --reset-author
-
- 1 file changed, 83 insertions(+)
- create mode 100644 submit/lab1/labN.LOG
-psammon1@remote07:~/i220a/submit/lab1$ git push
-Enumerating objects: 44, done.
-Counting objects:   2% (1/44)Counting objects:   4% (2/44)Counting objects:   6% (3/44)Counting objects:   9% (4/44)Counting objects:  11% (5/44)Counting objects:  13% (6/44)Counting objects:  15% (7/44)Counting objects:  18% (8/44)Counting objects:  20% (9/44)Counting objects:  22% (10/44)Counting objects:  25% (11/44)Counting objects:  27% (12/44)Counting objects:  29% (13/44)Counting objects:  31% (14/44)Counting objects:  34% (15/44)Counting objects:  36% (16/44)Counting objects:  38% (17/44)Counting objects:  40% (18/44)Counting objects:  43% (19/44)Counting objects:  45% (20/44)Counting objects:  47% (21/44)Counting objects:  50% (22/44)Counting objects:  52% (23/44)Counting objects:  54% (24/44)Counting objects:  56% (25/44)Counting objects:  59% (26/44)Counting objects:  61% (27/44)Counting objects:  63% (28/44)Counting objects:  65% (29/44)Counting objects:  68% (30/44)Counting objects:  70% (31/44)Counting objects:  72% (32/44)Counting objects:  75% (33/44)Counting objects:  77% (34/44)Counting objects:  79% (35/44)Counting objects:  81% (36/44)Counting objects:  84% (37/44)Counting objects:  86% (38/44)Counting objects:  88% (39/44)Counting objects:  90% (40/44)Counting objects:  93% (41/44)Counting objects:  95% (42/44)Counting objects:  97% (43/44)Counting objects: 100% (44/44)Counting objects: 100% (44/44), done.
-Delta compression using up to 8 threads
-Compressing objects:   3% (1/27)Compressing objects:   7% (2/27)Compressing objects:  11% (3/27)Compressing objects:  14% (4/27)Compressing objects:  18% (5/27)Compressing objects:  22% (6/27)Compressing objects:  25% (7/27)Compressing objects:  29% (8/27)Compressing objects:  33% (9/27)Compressing objects:  37% (10/27)Compressing objects:  40% (11/27)Compressing objects:  44% (12/27)Compressing objects:  48% (13/27)Compressing objects:  51% (14/27)Compressing objects:  55% (15/27)Compressing objects:  59% (16/27)Compressing objects:  62% (17/27)Compressing objects:  66% (18/27)Compressing objects:  70% (19/27)Compressing objects:  74% (20/27)Compressing objects:  77% (21/27)Compressing objects:  81% (22/27)Compressing objects:  85% (23/27)Compressing objects:  88% (24/27)Compressing objects:  92% (25/27)Compressing objects:  96% (26/27)Compressing objects: 100% (27/27)Compressing objects: 100% (27/27), done.
-Writing objects:   2% (1/36)Writing objects:   5% (2/36)Writing objects:   8% (3/36)Writing objects:  11% (4/36)Writing objects:  13% (5/36)Writing objects:  16% (6/36)Writing objects:  19% (7/36)Writing objects:  22% (8/36)Writing objects:  25% (9/36)Writing objects:  27% (10/36)Writing objects:  30% (11/36)Writing objects:  33% (12/36)Writing objects:  36% (13/36)Writing objects:  38% (14/36)Writing objects:  41% (15/36)Writing objects:  44% (16/36)Writing objects:  47% (17/36)Writing objects:  50% (18/36)Writing objects:  52% (19/36)Writing objects:  55% (20/36)Writing objects:  58% (21/36)Writing objects:  61% (22/36)Writing objects:  63% (23/36)Writing objects:  66% (24/36)Writing objects:  69% (25/36)Writing objects:  72% (26/36)Writing objects:  75% (27/36)Writing objects:  77% (28/36)Writing objects:  80% (29/36)Writing objects:  83% (30/36)Writing objects:  86% (31/36)Writing objects:  88% (32/36)Writing objects:  91% (33/36)Writing objects:  94% (34/36)Writing objects:  97% (35/36)Writing objects: 100% (36/36)Writing objects: 100% (36/36), 8.22 KiB | 701.00 KiB/s, done.
-Total 36 (delta 4), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas:   0% (0/4)[Kremote: Resolving deltas:  50% (2/4)[Kremote: Resolving deltas: 100% (4/4)[Kremote: Resolving deltas: 100% (4/4), completed with 2 local objects.[K
-To github.com:psammon/i220a.git
-   20dd7ce..19a2f62  prj1 -> prj1
-psammon1@remote07:~/i220a/submit/lab1$ cd ~/i220a
-psammon1@remote07:~/i220a$ git branch -l
-[?1h=  lab0[m[m
-  lab1[m[m
-  lab2[m[m
-  lab3[m[m
-  lab4[m[m
-  master[m[m
-* [32mprj1[m[m
-[K[?1l>psammon1@remote07:~/i220a$ git checkout[K[K[K[K[K[K[K[K[K[K[K[Kgit push -u origin lab1
-Branch 'lab1' set up to track remote branch 'lab1' from 'origin'.
-Everything up-to-date
-psammon1@remote07:~/i220a$ git push -u origin lab1[10Pbranch -l
-[?1h=  lab0[m[m
-  lab1[m[m
-  lab2[m[m
-  lab3[m[m
-  lab4[m[m
-  master[m[m
-* [32mprj1[m[m
-[K[?1l>psammon1@remote07:~/i220a$ git branch -l[K[K[K[K[K[K[K[K[K[K[K[K[Kgit checkout lab1
-error: Your local changes to the following files would be overwritten by checkout:
-	submit/lab1/labN.LOG
-	submit/prj1-sol/README
-Please commit your changes or stash them before you switch branches.
-Aborting
-psammon1@remote07:~/i220a$ git checkout lab1[Kgit stash
-Saved working directory and index state WIP on prj1: 19a2f62 completed exercise 2
-psammon1@remote07:~/i220a$ git stashcheckout lab1
-Switched to branch 'lab1'
-Your branch is up to date with 'origin/lab1'.
-psammon1@remote07:~/i220a$ git checkout lab1[8Pstashcheckout lab1[4Pbranch -l
-[?1h=  lab0[m[m
-* [32mlab1[m[m
-  lab2[m[m
-  lab3[m[m
-  lab4[m[m
-  master[m[m
-  prj1[m[m
-[K[?1l>psammon1@remote07:~/i220a$ git checkout master
-Switched to branch 'master'
-Your branch is up to date with 'origin/master'.
-psammon1@remote07:~/i220a$ git pull
-warning: Pulling without specifying how to reconcile divergent branches is
-discouraged. You can squelch this message by running one of the following
-commands sometime before your next pull:
-
-  git config pull.rebase false  # merge (the default strategy)
-  git config pull.rebase true   # rebase
-  git config pull.ff only       # fast-forward only
-
-You can replace "git config" with "git config --global" to set a default
-preference for all repositories. You can also pass --rebase, --no-rebase,
-or --ff-only on the command line to override the configured default per
-invocation.
-
-Already up to date.
-psammon1@remote07:~/i220a$ git checkout lab1
-Switched to branch 'lab1'
-Your branch is up to date with 'origin/lab1'.
-psammon1@remote07:~/i220a$ git merge -m 'merged master' master
-Merge made by the 'recursive' strategy.
- submit/lab2/exercises/.gitignore                      |   1 [32m+[m
- submit/lab2/exercises/1-hello-args/.gitignore         |   1 [32m+[m
- submit/lab2/exercises/1-hello-args/Makefile           |   3 [32m+[m
- submit/lab2/exercises/1-hello-args/README             |   1 [32m+[m
- submit/lab2/exercises/1-hello-args/hello.c            |  23 [32m+[m
- submit/lab2/exercises/2-hello-upcase-args/.gitignore  |   1 [32m+[m
- submit/lab2/exercises/2-hello-upcase-args/Makefile    |   3 [32m+[m
- submit/lab2/exercises/2-hello-upcase-args/README      |   4 [32m+[m
- submit/lab2/exercises/2-hello-upcase-args/hello.c     |  48 [32m++[m
- submit/lab2/exercises/Makefile                        |   2 [32m+[m
- submit/lab2/lab2.LOG                                  | 883 [32m+++++++++++++++++++++++++++++++[m
- submit/lab3/exercises/.gitignore                      |   1 [32m+[m
- submit/lab4/exercises/1-pointers/.gitignore           |   1 [32m+[m
- submit/lab4/exercises/1-pointers/pointers.c           |  18 [32m+[m
- submit/lab4/exercises/2-in-pointers/.gitignore        |   1 [32m+[m
- submit/lab4/exercises/2-in-pointers/in-pointers.c     |  48 [32m++[m
- submit/lab4/exercises/3-bad-types/.gitignore          |   1 [32m+[m
- submit/lab4/exercises/3-bad-types/bad-types.c         |  18 [32m+[m
- submit/lab4/exercises/4-cast-types/.gitignore         |   1 [32m+[m
- submit/lab4/exercises/4-cast-types/cast-types.c       |  18 [32m+[m
- submit/lab4/exercises/5-void-pointers/.gitignore      |   1 [32m+[m
- submit/lab4/exercises/5-void-pointers/void-pointers.c |  17 [32m+[m
- submit/lab4/exercises/6-in-voids/.gitignore           |   1 [32m+[m
- submit/lab4/exercises/6-in-voids/in-voids.c           |  48 [32m++[m
- submit/lab4/exercises/Makefile                        |  28 [32m+[m
- 25 files changed, 1172 insertions(+)
- create mode 100644 submit/lab2/exercises/.gitignore
- create mode 100644 submit/lab2/exercises/1-hello-args/.gitignore
- create mode 100644 submit/lab2/exercises/1-hello-args/Makefile
- create mode 100644 submit/lab2/exercises/1-hello-args/README
- create mode 100644 submit/lab2/exercises/1-hello-args/hello.c
- create mode 100644 submit/lab2/exercises/2-hello-upcase-args/.gitignore
- create mode 100644 submit/lab2/exercises/2-hello-upcase-args/Makefile
- create mode 100644 submit/lab2/exercises/2-hello-upcase-args/README
- create mode 100644 submit/lab2/exercises/2-hello-upcase-args/hello.c
- create mode 100644 submit/lab2/exercises/Makefile
- create mode 100644 submit/lab2/lab2.LOG
- create mode 100644 submit/lab3/exercises/.gitignore
- create mode 100644 submit/lab4/exercises/1-pointers/.gitignore
- create mode 100644 submit/lab4/exercises/1-pointers/pointers.c
- create mode 100644 submit/lab4/exercises/2-in-pointers/.gitignore
- create mode 100644 submit/lab4/exercises/2-in-pointers/in-pointers.c
- create mode 100644 submit/lab4/exercises/3-bad-types/.gitignore
- create mode 100644 submit/lab4/exercises/3-bad-types/bad-types.c
- create mode 100644 submit/lab4/exercises/4-cast-types/.gitignore
- create mode 100644 submit/lab4/exercises/4-cast
