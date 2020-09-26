@@ -62,7 +62,7 @@ compute_parity(HammingWord word, int bitIndex, unsigned nBits)
   
   for(int i = 1; i <= nBits; i++)
   {
-	  if((i & bitIndex) == bitIndex)
+	  if((i & bitIndex) && (i !=bitIndex))
 	  {
 		if(get_bit(word, i) == 1)
 		 	 parity++;
