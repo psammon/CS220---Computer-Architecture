@@ -1,5 +1,5 @@
 #include "hamming.h"
-
+#include <stdio.h>
 #include <assert.h>
 
 /**
@@ -13,16 +13,19 @@ static inline unsigned
 get_bit(HammingWord word, int bitIndex)
 {
   assert(bitIndex > 0);
-  return ((1 << (bitIndex)) & word) != 0;
+  return ((1ull << (bitIndex-1)) & word) != 0;
 }
-
 /** Return word with bit at bitIndex in word set to bitValue. */
 static inline HammingWord
 set_bit(HammingWord word, int bitIndex, unsigned bitValue)
 {
   assert(bitIndex > 0);
   assert(bitValue == 0 || bitValue == 1);
-  word |= (bitValue << (bitIndex-1));
+  if(bitValue == 1)
+ 	 word |= (1 << (bitIndex-1));
+  else
+	 word &= ~(1 << (bitIndex-1));
+
   return word;
 }
 
@@ -41,11 +44,16 @@ get_n_encoded_bits(unsigned nParityBits)
  *  contains only a single 1.
  */
 static inline int
-is_parity_position(int bitIndex)
+is_parity_position(int bitIndex, unsigned nBits)
 {
   assert(bitIndex > 0);
-  if(bitIndex & (bitIndex-1) == 0)
-	  return 1;
+ // if(bitIndex & (bitIndex-1) == 0)
+//	  return 1;
+  for(int i = 0; i < nBits; i++)
+  {
+	  if(bitIndex == 1 << i)
+		  return 1;
+  }
   return 0;
 }
 
@@ -62,13 +70,15 @@ compute_parity(HammingWord word, int bitIndex, unsigned nBits)
   
   for(int i = 1; i <= nBits; i++)
   {
-	  if((i & bitIndex) && (i !=bitIndex))
+	  unsigned long long temp = i & bitIndex;
+	  if((temp != 0) && (is_parity_position(i, nBits) == 0))
 	  {
-		if(get_bit(word, i) == 1)
-		 	 parity++;
+	//	if(get_bit(word, i) == 1)
+		 	 parity += get_bit(word, i);
+		//	 printf("bitIndex: %d parity: %d\n", bitIndex, parity);
 	  }
   }	
-
+ // printf("bitIndex: %d parity: %d\n", bitIndex, parity);
   return parity%2;
 }
 
@@ -80,26 +90,29 @@ HammingWord
 hamming_encode(HammingWord data, unsigned nParityBits)
 {
   HammingWord encoded = 0;
-  int nBits = get_n_encoded_bits(nParityBits), j = 1;
+  unsigned nBits = get_n_encoded_bits(nParityBits), temp = 0;
+ // int  j = 1;
 
-  while(j <= nBits - nParityBits)
-  {
+ // while(j <= nBits - nParityBits)
+ // {
 	  for(int i  = 1; i <= nBits; i++)
 	  {
-		  if(!is_parity_position(i))
+		  if(is_parity_position(i, nBits) == 0)
 		  {
-			 int temp = get_bit(data, j);
+			 temp = get_bit(data, 1);
+		//	 printf("temp = %d\n", temp);
+			 data = data >> 1;
 			 encoded = set_bit(encoded, i, temp);
-			 j++;
+		//	 j++;
 		  }
 	  }
-
- }
+//	printf("encoded = %d\n", encoded);
+// }
   for(int i = 1; i <= nBits; i++)
   {
-	  if(is_parity_position(i))
+	  if(is_parity_position(i, nBits) == 1)
 	  {
-		  int temp = compute_parity(encoded, i, nBits);
+		  temp = compute_parity(encoded, i, nBits);
 		  encoded = set_bit(encoded, i, temp);
 	  }
   }
@@ -120,7 +133,7 @@ hamming_decode(HammingWord encoded, unsigned nParityBits,
 
   for(int i = 1; i <= nBits; i++)
   {
-	  if(is_parity_position(i))
+	  if(is_parity_position(i, nBits))
 	  {
 		  int par = compute_parity(encoded, i, nBits);
 		  if(get_bit(encoded, i) != par)
@@ -135,7 +148,7 @@ hamming_decode(HammingWord encoded, unsigned nParityBits,
   {
 	  for(int i = 1; i <= nBits; i++)
 	  {
-		  if(!is_parity_position(i))
+		  if(!is_parity_position(i, nBits))
 		  {
 			 int temp = get_bit(encoded, i);
 			 decoded = set_bit(decoded, j, temp);
