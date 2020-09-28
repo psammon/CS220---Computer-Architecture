@@ -13,7 +13,7 @@ static inline unsigned
 get_bit(HammingWord word, int bitIndex)
 {
   assert(bitIndex > 0);
-  return ((1ull << (bitIndex-1)) & word) != 0;
+  return ((1ULL << (bitIndex-1)) & word) != 0;
 }
 /** Return word with bit at bitIndex in word set to bitValue. */
 static inline HammingWord
@@ -22,9 +22,9 @@ set_bit(HammingWord word, int bitIndex, unsigned bitValue)
   assert(bitIndex > 0);
   assert(bitValue == 0 || bitValue == 1);
   if(bitValue == 1)
- 	 word |= (1 << (bitIndex-1));
+ 	 word |= (1ULL << (bitIndex-1));
   else
-	 word &= ~(1 << (bitIndex-1));
+	 word &= ~(1ULL << (bitIndex-1));
 
   return word;
 }
@@ -137,12 +137,14 @@ hamming_decode(HammingWord encoded, unsigned nParityBits,
 	  {
 		  int par = compute_parity(encoded, i, nBits);
 		  if(get_bit(encoded, i) != par)
-			  syndrome |= i;
+			  syndrome += i;
 	  }
   }
 
-  if(syndrome != 0)
-	  encoded ^= (1 << syndrome);
+  if(syndrome != 0) {
+	  encoded ^= (1 << (syndrome-1));
+	  *hasError = 1;
+  }
 
   while(j <= nBits-nParityBits)
   {
