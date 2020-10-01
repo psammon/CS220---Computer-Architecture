@@ -124,3 +124,366 @@ make: *** No rule to make target 'mystery.o', needed by 'identify'.  Stop.
 psammon1@remote00:~/i220a/submit/lab5/exercises/3-identify$ exit
 
 Script done on 2020-09-30 20:01:34-04:00 [COMMAND_EXIT_CODE="2"]
+Script started on 2020-09-30 20:08:59-04:00 [TERM="xterm" TTY="/dev/pts/3" COLUMNS="93" LINES="49"]
+psammon1@remote00:~/i220a/submit/lab5$ make[2Plsvim identify.c[2Prm identify.[1@vi[C[C[C[C[C[C[C[C[C[C[C[1Prm mystery.cls[Kvim mystery.cls[Krm mystery.cvim identify.[1Pr[C[C[C[C[C[C[C[C[C[C[Cvim identify.cls[Kmake[Kcd s[Kexercises/3-identify/
+psammon1@remote00:~/i220a/submit/lab5/exercises/3-identify$ cd exercises/3-identify/[Kmake
+cc   identify.o mystery.o   -o identify
+psammon1@remote00:~/i220a/submit/lab5/exercises/3-identify$ ./identify
+32768
+mystery = 206696 (0x32768)
+8000
+mystery = 32768 (0x8000)
+^[[A    8000000
+mystery = 0 (0x0)
+6000000
+mystery = 0 (0x0)
+4000000
+mystery = 0 (0x0)
+2000000
+mystery = 0 (0x0)
+1000000
+mystery = 0 (0x0)
+8000000
+mystery = 0 (0x0)
+800000
+mystery = 0 (0x0)
+8000
+mystery = 32768 (0x8000)
+80000
+mystery = 524288 (0x80000)
+800000
+mystery = 0 (0x0)
+^[[A^[[A        600000
+mystery = 6291456 (0x600000)
+7 700000
+mystery = 7340032 (0x700000)
+^[[A^[[A        f000000 
+mystery = 7340032 (0x700000)
+fffff
+mystery = 1048575 (0xfffff)
+60  600000
+mystery = 6291456 (0x600000)
+ffffff
+mystery = 8388607 (0x7fffff)
+800000
+mystery = 0 (0x0)
+800000 1
+mystery = 1 (0x1)
+psammon1@remote00:~/i220a/submit/lab5/exercises/3-identify$ cd ../4-negeq/
+psammon1@remote00:~/i220a/submit/lab5/exercises/4-negeq$ make
+cc -g -Wall -std=c11    negeq.c   -o negeq
+psammon1@remote00:~/i220a/submit/lab5/exercises/4-negeq$ ./-,[K[Knegeq [K
+psammon1@remote00:~/i220a/submit/lab5/exercises/4-negeq$ ls
+Makefile  negeq  negeq.c
+psammon1@remote00:~/i220a/submit/lab5/exercises/4-negeq$ vim negeq.c
+[?1000h[?2004h[?1049h[22;0;0t[?1h=[?2004h[1;49r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[49;1H"negeq.c" 11L, 217C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1H[35m#include [m[31m<stdio.h>[m
+
+[32mint[m main() {
+  [33mwhile[m ([31m1[m) {
+    [32mint[m i;
+    [33mif[m (scanf([31m"[m[35m%x[m[31m"[m, &i) != [31m1[m) [33mbreak[m;
+    printf([31m"[m[35m%d[m[31m [m[35m%s[m[31m -[m[35m%d\n[m[31m"[m, i, (i == -i) ? [31m"=="[m : [31m"!="[m, i);
+    [33mif[m (i == -i) { printf([31m"done[m[35m\n[m[31m"[m); [33mbreak[m; }
+  }
+  [33mreturn[m [31m0[m;
+}
+[1m[34m~                                                                                            [13;1H~                                                                                            [14;1H~                                                                                            [15;1H~                                                                                            [16;1H~                                                                                            [17;1H~                                                                                            [18;1H~                                                                                            [19;1H~                                                                                            [20;1H~                                                                                            [21;1H~                                                                                            [22;1H~                                                                                            [23;1H~                                                                                            [24;1H~                                                                                            [25;1H~                                                                                            [26;1H~                                                                                            [27;1H~                                                                                            [28;1H~                                                                                            [29;1H~                                                                                            [30;1H~                                                                                            [31;1H~                                                                                            [32;1H~                                                                                            [33;1H~                                                                                            [34;1H~                                                                                            [35;1H~                                                                                            [36;1H~                                                                                            [37;1H~                                                                                            [38;1H~                                                                                            [39;1H~                                                                                            [40;1H~                                                                                            [41;1H~                                                                                            [42;1H~                                                                                            [43;1H~                                                                                            [44;1H~                                                                                            [45;1H~                                                                                            [46;1H~                                                                                            [47;1H~                                                                                            [48;1H~                                                                                            [m[49;76H1,1[11CAll[1;1H[?25h[?1000l[?1002h[?25l[3;12H[46m{[11;1H}[m[49;77H1,1[11;1H[?25h[?25l[49;66H:[11;1H[49;1H[K[49;1H:[?2004h[?25hw[?25l[?25hq[?25l[?25h[?25l[?1002l[?2004l"negeq.c" 11L, 217C written[23;2t[23;1t[22;2t[22;1t[23;2t[23;1t
+[?2004l[?1l>[?25h[?1049l[23;0;0tpsammon1@remote00:~/i220a/submit/lab5/exercises/4-negeq$ vim negeq.cls[K./negeq
+80000000
+-2147483648 == --2147483648
+done
+psammon1@remote00:~/i220a/submit/lab5/exercises/4-negeq$ cd ../5[K[K[K[K[K[K[Kcd ,[K..
+psammon1@remote00:~/i220a/submit/lab5/exercises$ ;[Kls
+1-uints  2-ints  3-identify  4-negeq  6-inexact  7-nan	8-ulp  9-loop
+psammon1@remote00:~/i220a/submit/lab5/exercises$ lscd .../negeqvim negeq.cls[K./negeq[3Pmakecd ../4-negeq/[4P./identifycd ../4-negeq/[1P4-negeq/[1P4-negeq/[1P4-negeq/[1P4-negeq/ 4-negeq/
+psammon1@remote00:~/i220a/submit/lab5/exercises/4-negeq$ python
+Python 2.7.16 (default, Oct 10 2019, 22:02:15) 
+[GCC 8.3.0] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> 10**1000 - 1.0
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+OverflowError: long int too large to convert to float
+>>> 
+psammon1@remote00:~/i220a/submit/lab5/exercises/4-negeq$ pythoncd 4-negeq/ls[Kcd .../negeqvim negeq.cls[K./negeq[3Pmakecd ../4-negeq/[4P./identify[6Pmakecd exercises/3-identify/make[K[2Plsvim identify.cls[Kmakecd exercises/3-identify/[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kcd ../6-inexact/
+psammon1@remote00:~/i220a/submit/lab5/exercises/6-inexact$ make
+cc -g -Wall -std=c11    0.1.c   -o 0.1
+psammon1@remote00:~/i220a/submit/lab5/exercises/6-inexact$ v[K./0.1
+0.99999999999999988898 0
+psammon1@remote00:~/i220a/submit/lab5/exercises/6-inexact$ vim 0.1.c
+[?1000h[?2004h[?1049h[22;0;0t[?1h=[?2004h[1;49r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[49;1H"0.1.c" 10L, 159C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1H[35m#include [m[31m<stdio.h>[m
+
+[32mint[m main() {
+  [32mdouble[m sum = [31m0[m;
+  [33mfor[m ([32mint[m i = [31m0[m; i < [31m10[m; i++) {
+    sum += [31m0.1[m;
+  }
+  printf([31m"[m[35m%.20f[m[31m [m[35m%d\n[m[31m"[m, sum, sum == [31m1.0[m);
+  [33mreturn[m [31m0[m;
+}
+[1m[34m~                                                                                            [12;1H~                                                                                            [13;1H~                                                                                            [14;1H~                                                                                            [15;1H~                                                                                            [16;1H~                                                                                            [17;1H~                                                                                            [18;1H~                                                                                            [19;1H~                                                                                            [20;1H~                                                                                            [21;1H~                                                                                            [22;1H~                                                                                            [23;1H~                                                                                            [24;1H~                                                                                            [25;1H~                                                                                            [26;1H~                                                                                            [27;1H~                                                                                            [28;1H~                                                                                            [29;1H~                                                                                            [30;1H~                                                                                            [31;1H~                                                                                            [32;1H~                                                                                            [33;1H~                                                                                            [34;1H~                                                                                            [35;1H~                                                                                            [36;1H~                                                                                            [37;1H~                                                                                            [38;1H~                                                                                            [39;1H~                                                                                            [40;1H~                                                                                            [41;1H~                                                                                            [42;1H~                                                                                            [43;1H~                                                                                            [44;1H~                                                                                            [45;1H~                                                                                            [46;1H~                                                                                            [47;1H~                                                                                            [48;1H~                                                                                            [m[49;76H1,1[11CAll[1;1H[?25h[?1000l[?1002h[?25l[49;66H:[1;1H[49;1H[K[49;1H:[?2004h[?25hw[?25l[?25hq[?25l[?25h[?25l[?1002l[?2004l"0.1.c" 10L, 159C written[23;2t[23;1t[22;2t[22;1t[23;2t[23;1t
+[?2004l[?1l>[?25h[?1049l[23;0;0tpsammon1@remote00:~/i220a/submit/lab5/exercises/6-inexact$ vim 0.1.c[4P./0.1[1Pmakecd ../6-inexact/[K[K[K[K[K[K[K[K[K[K7-nan/
+psammon1@remote00:~/i220a/submit/lab5/exercises/7-nan$ make
+cc -g -Wall -std=c11    nan.c   -o nan
+psammon1@remote00:~/i220a/submit/lab5/exercises/7-nan$ ./nan
+0.2
+x = 1
+loop exit
+psammon1@remote00:~/i220a/submit/lab5/exercises/7-nan$ ./nan
+0.1
+x = 1
+loop exit
+psammon1@remote00:~/i220a/submit/lab5/exercises/7-nan$ vim nan.c
+[?1000h[?2004h[?1049h[22;0;0t[?1h=[?2004h[1;49r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[49;1H"nan.c" 14L, 183C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1H[35m#include [m[31m<stdio.h>[m
+
+[32mint[m main() {
+
+  [32mdouble[m v;
+  scanf([31m"[m[35m%lf[m[31m"[m, &v);
+  [32mdouble[m x = v/v;
+  printf([31m"x = [m[35m%lg\n[m[31m"[m, x);
+  [33mwhile[m (x != x) {
+    [34m//loop[m
+  }
+  printf([31m"loop exit[m[35m\n[m[31m"[m);
+  [33mreturn[m [31m0[m;
+}
+[1m[34m~                                                                                            [16;1H~                                                                                            [17;1H~                                                                                            [18;1H~                                                                                            [19;1H~                                                                                            [20;1H~                                                                                            [21;1H~                                                                                            [22;1H~                                                                                            [23;1H~                                                                                            [24;1H~                                                                                            [25;1H~                                                                                            [26;1H~                                                                                            [27;1H~                                                                                            [28;1H~                                                                                            [29;1H~                                                                                            [30;1H~                                                                                            [31;1H~                                                                                            [32;1H~                                                                                            [33;1H~                                                                                            [34;1H~                                                                                            [35;1H~                                                                                            [36;1H~                                                                                            [37;1H~                                                                                            [38;1H~                                                                                            [39;1H~                                                                                            [40;1H~                                                                                            [41;1H~                                                                                            [42;1H~                                                                                            [43;1H~                                                                                            [44;1H~                                                                                            [45;1H~                                                                                            [46;1H~                                                                                            [47;1H~                                                                                            [48;1H~                                                                                            [m[49;76H1,1[11CAll[1;1H[?25h[?1000l[?1002h[?25l[3;12H[46m{[14;1H}[m[49;77H4,1[14;1H[?25h[?25l[49;66H:[14;1H[49;1H[K[49;1H:[?2004h[?25hw[?25l[?25hq[?25l[?25h[?25l[?1002l[?2004l"nan.c" 14L, 183C written[23;2t[23;1t[22;2t[22;1t[23;2t[23;1t
+[?2004l[?1l>[?25h[?1049l[23;0;0tpsammon1@remote00:~/i220a/submit/lab5/exercises/7-nan$ vim nan.c[4P./nan
+0.  0.8
+x = 1
+loop exit
+psammon1@remote00:~/i220a/submit/lab5/exercises/7-nan$ ./nanvim nan.c[4P./nan[1Pmakecd ../7-nan/[3Pvim 0.1.ccd ../7-nan/[3Pvim 0.1.c[4P./0.1[1Pmakecd ../6-inexact/
+psammon1@remote00:~/i220a/submit/lab5/exercises/6-inexact$ ls
+0.1  0.1.c  Makefile
+psammon1@remote00:~/i220a/submit/lab5/exercises/6-inexact$ lscd ../6-inexact/./nan[Kvim nan.c[4P./nan[1Pmakecd ../7-nan/[3Pvim 0.1.c[4P./0.1vim 0.1.c
+[?1000h[?2004h[?1049h[22;0;0t[?1h=[?2004h[1;49r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[49;1H"0.1.c" 10L, 159C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1H[35m#include [m[31m<stdio.h>[m
+
+[32mint[m main() {
+  [32mdouble[m sum = [31m0[m;
+  [33mfor[m ([32mint[m i = [31m0[m; i < [31m10[m; i++) {
+    sum += [31m0.1[m;
+  }
+  printf([31m"[m[35m%.20f[m[31m [m[35m%d\n[m[31m"[m, sum, sum == [31m1.0[m);
+  [33mreturn[m [31m0[m;
+}
+[1m[34m~                                                                                            [12;1H~                                                                                            [13;1H~                                                                                            [14;1H~                                                                                            [15;1H~                                                                                            [16;1H~                                                                                            [17;1H~                                                                                            [18;1H~                                                                                            [19;1H~                                                                                            [20;1H~                                                                                            [21;1H~                                                                                            [22;1H~                                                                                            [23;1H~                                                                                            [24;1H~                                                                                            [25;1H~                                                                                            [26;1H~                                                                                            [27;1H~                                                                                            [28;1H~                                                                                            [29;1H~                                                                                            [30;1H~                                                                                            [31;1H~                                                                                            [32;1H~                                                                                            [33;1H~                                                                                            [34;1H~                                                                                            [35;1H~                                                                                            [36;1H~                                                                                            [37;1H~                                                                                            [38;1H~                                                                                            [39;1H~                                                                                            [40;1H~                                                                                            [41;1H~                                                                                            [42;1H~                                                                                            [43;1H~                                                                                            [44;1H~                                                                                            [45;1H~                                                                                            [46;1H~                                                                                            [47;1H~                                                                                            [48;1H~                                                                                            [m[49;76H1,1[11CAll[1;1H[?25h[?1000l[?1002h[?25l[49;66H:[1;1H[49;1H[K[49;1H:[?2004h[?25hw[?25l[?25hq[?25l[?25h[?25l[?1002l[?2004l"0.1.c" 10L, 159C written[23;2t[23;1t[22;2t[22;1t[23;2t[23;1t
+[?2004l[?1l>[?25h[?1049l[23;0;0tpsammon1@remote00:~/i220a/submit/lab5/exercises/6-inexact$ vim 0.1.cls[Kcd ../6-inexact/./nan[Kvim nan.c[4P./nan[1Pmakecd ../7-nan/[3Pvim 0.1.ccd ../7-nan/
+psammon1@remote00:~/i220a/submit/lab5/exercises/7-nan$ ./nan
+nan
+x = nan
+^C
+psammon1@remote00:~/i220a/submit/lab5/exercises/7-nan$ ./nan[K[K[K[K[Kcd ../8-ulp/
+psammon1@remote00:~/i220a/submit/lab5/exercises/8-ulp$ make
+cc -g -Wall -std=c11    ulp.c  -lm -o ulp
+psammon1@remote00:~/i220a/submit/lab5/exercises/8-ulp$ ,[K./ulp
+usage ./ulp data|lg-data|verbose
+psammon1@remote00:~/i220a/submit/lab5/exercises/8-ulp$ ./ulp verbose
+v = 0x1 (1), ulp = 1.1920928955078e-07
+v = 0x2 (2), ulp = 2.3841857910156e-07
+v = 0x4 (4), ulp = 4.7683715820312e-07
+v = 0x8 (8), ulp = 9.5367431640625e-07
+v = 0x10 (16), ulp = 1.9073486328125e-06
+v = 0x20 (32), ulp = 3.814697265625e-06
+v = 0x40 (64), ulp = 7.62939453125e-06
+v = 0x80 (128), ulp = 1.52587890625e-05
+v = 0x100 (256), ulp = 3.0517578125e-05
+v = 0x200 (512), ulp = 6.103515625e-05
+v = 0x400 (1024), ulp = 0.0001220703125
+v = 0x800 (2048), ulp = 0.000244140625
+v = 0x1000 (4096), ulp = 0.00048828125
+v = 0x2000 (8192), ulp = 0.0009765625
+v = 0x4000 (16384), ulp = 0.001953125
+v = 0x8000 (32768), ulp = 0.00390625
+v = 0x10000 (65536), ulp = 0.0078125
+v = 0x20000 (131072), ulp = 0.015625
+v = 0x40000 (262144), ulp = 0.03125
+v = 0x80000 (524288), ulp = 0.0625
+v = 0x100000 (1.04858e+06), ulp = 0.125
+v = 0x200000 (2.09715e+06), ulp = 0.25
+v = 0x400000 (4.1943e+06), ulp = 0.5
+v = 0x800000 (8.38861e+06), ulp = 1
+v = 0x1000000 (1.67772e+07), ulp = 2
+v = 0x2000000 (3.35544e+07), ulp = 4
+v = 0x4000000 (6.71089e+07), ulp = 8
+v = 0x8000000 (1.34218e+08), ulp = 16
+v = 0x10000000 (2.68435e+08), ulp = 32
+v = 0x20000000 (5.36871e+08), ulp = 64
+v = 0x40000000 (1.07374e+09), ulp = 128
+v = 0x80000000 (2.14748e+09), ulp = 256
+v = 0x100000000 (4.29497e+09), ulp = 512
+v = 0x200000000 (8.58993e+09), ulp = 1024
+v = 0x400000000 (1.71799e+10), ulp = 2048
+v = 0x800000000 (3.43597e+10), ulp = 4096
+v = 0x1000000000 (6.87195e+10), ulp = 8192
+v = 0x2000000000 (1.37439e+11), ulp = 16384
+v = 0x4000000000 (2.74878e+11), ulp = 32768
+v = 0x8000000000 (5.49756e+11), ulp = 65536
+v = 0x10000000000 (1.09951e+12), ulp = 131072
+v = 0x20000000000 (2.19902e+12), ulp = 262144
+v = 0x40000000000 (4.39805e+12), ulp = 524288
+v = 0x80000000000 (8.79609e+12), ulp = 1048576
+v = 0x100000000000 (1.75922e+13), ulp = 2097152
+v = 0x200000000000 (3.51844e+13), ulp = 4194304
+v = 0x400000000000 (7.03687e+13), ulp = 8388608
+v = 0x800000000000 (1.40737e+14), ulp = 16777216
+v = 0x1000000000000 (2.81475e+14), ulp = 33554432
+v = 0x2000000000000 (5.6295e+14), ulp = 67108864
+v = 0x4000000000000 (1.1259e+15), ulp = 134217728
+v = 0x8000000000000 (2.2518e+15), ulp = 268435456
+v = 0x10000000000000 (4.5036e+15), ulp = 536870912
+v = 0x20000000000000 (9.0072e+15), ulp = 1073741824
+v = 0x40000000000000 (1.80144e+16), ulp = 2147483648
+v = 0x80000000000000 (3.60288e+16), ulp = 4294967296
+v = 0x100000000000000 (7.20576e+16), ulp = 8589934592
+v = 0x200000000000000 (1.44115e+17), ulp = 17179869184
+v = 0x400000000000000 (2.8823e+17), ulp = 34359738368
+v = 0x800000000000000 (5.76461e+17), ulp = 68719476736
+v = 0x1000000000000000 (1.15292e+18), ulp = 137438953472
+v = 0x2000000000000000 (2.30584e+18), ulp = 274877906944
+v = 0x4000000000000000 (4.61169e+18), ulp = 549755813888
+v = 0x8000000000000000 (9.22337e+18), ulp = 1099511627776
+psammon1@remote00:~/i220a/submit/lab5/exercises/8-ulp$ ./ulp verbose[K[K[K[K[K[K[Kdata >ulp.data
+psammon1@remote00:~/i220a/submit/lab5/exercises/8-ulp$ gnuplot - [Kp ulp.gp
+09:27:34 PM: Error: Unable to initialize GTK+, is DISPLAY set properly?
+Failed to initialize wxWidgets.
+psammon1@remote00:~/i220a/submit/lab5/exercises/8-ulp$ set terminal dumb[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kvim ulp.gp
+[?1000h[?2004h[?1049h[22;0;0t[?1h=[?2004h[1;49r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[49;1H"ulp.gp" 3L, 53C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1Hset xlabel [31m"value"[m
+set ylabel [31m"ULP"[m
+plot [31m"ulp.data"[m
+[1m[34m~                                                                                            [5;1H~                                                                                            [6;1H~                                                                                            [7;1H~                                                                                            [8;1H~                                                                                            [9;1H~                                                                                            [10;1H~                                                                                            [11;1H~                                                                                            [12;1H~                                                                                            [13;1H~                                                                                            [14;1H~                                                                                            [15;1H~                                                                                            [16;1H~                                                                                            [17;1H~                                                                                            [18;1H~                                                                                            [19;1H~                                                                                            [20;1H~                                                                                            [21;1H~                                                                                            [22;1H~                                                                                            [23;1H~                                                                                            [24;1H~                                                                                            [25;1H~                                                                                            [26;1H~                                                                                            [27;1H~                                                                                            [28;1H~                                                                                            [29;1H~                                                                                            [30;1H~                                                                                            [31;1H~                                                                                            [32;1H~                                                                                            [33;1H~                                                                                            [34;1H~                                                                                            [35;1H~                                                                                            [36;1H~                                                                                            [37;1H~                                                                                            [38;1H~                                                                                            [39;1H~                                                                                            [40;1H~                                                                                            [41;1H~                                                                                            [42;1H~                                                                                            [43;1H~                                                                                            [44;1H~                                                                                            [45;1H~                                                                                            [46;1H~                                                                                            [47;1H~                                                                                            [48;1H~                                                                                            [m[49;76H1,1[11CAll[1;1H[?25h[?1000l[?1002h[?25l[49;66Hi[1;1H[49;66H [1;1H[49;1H[1m-- INSERT --[m[49;14H[K[49;76H1,1[11CAll[1;1H[?25h[?25l[2;48r[2;1H[L[1;49r[1;1H[K[2;1Hset xlabel [31m"value"[m[49;76H[K[49;76H2,1[11CAll[2;1H[?25h[?25l[49;76H1[1;1H[?25h[?25ls[49;78H2[1;2H[?25h[?25le[49;78H3[1;3H[?25h[?25lt[49;78H4[1;4H[?25h[?25l[49;78H5[1;5H[?25h[?25lt[49;78H6[1;6H[?25h[?25le[49;78H7[1;7H[?25h[?25lr[49;78H8[1;8H[?25h[?25lm[49;78H9[1;9H[?25h[?25li[49;78H10[1;10H[?25h[?25ln[49;79H1[1;11H[?25h[?25la[49;79H2[1;12H[?25h[?25ll[49;79H3[1;13H[?25h[?25l[49;79H4[1;14H[?25h[?25ld[49;79H5[1;15H[?25h[?25lu[49;79H6[1;16H[?25h[?25lm[49;79H7[1;17H[?25h[?25lb[49;79H8[1;18H[?25h[?25l;[49;79H9[1;19H[?25h[?25l:[49;78H20[1;20H[?25h[?25l[1;19H[K[49;78H19[1;19H[?25h[49;1H[K[1;18H[?25l[49;66H^[[1;18H[49;66H  [1;19H[49;76H1,18[10CAll[1;18H[?25h[?25l[49;66H:[1;18H[49;66H[K[49;1H:[?2004h[?25hw[?25l[?25hq[?25l[?25h[?25l[?1002l[?2004l"ulp.gp" 4L, 72C written[23;2t[23;1t[22;2t[22;1t[23;2t[23;1t
+[?2004l[?1l>[?25h[?1049l[23;0;0tpsammon1@remote00:~/i220a/submit/lab5/exercises/8-ulp$ make
+make: 'ulp' is up to date.
+psammon1@remote00:~/i220a/submit/lab5/exercises/8-ulp$ makevim ulp.gp[7@gnuplot -p[C[C[C[C[C[C[C./ulp data >ulp.data
+psammon1@remote00:~/i220a/submit/lab5/exercises/8-ulp$ ./ulp data >ulp.datamake[Kvim ulp.gp[7@gnuplot -p[C[C[C[C[C[C[C
+                                                                               
+     1.2e+12 +-------------------------------------------------------------+   
+             |     +     +      +     +     +     +     +      +     +     |   
+             |                                          "ulp.data"    A    |   
+       1e+12 |-+                                                         +-|   
+             |                                                             |   
+             |                                                             |   
+       8e+11 |-+                                                         +-|   
+             |                                                             |   
+             |                                                             |   
+       6e+11 |-+                                                         +-|   
+             |                            A                                |   
+             |                                                             |   
+             |                                                             |   
+       4e+11 |-+                                                         +-|   
+             |                                                             |   
+             |             A                                               |   
+       2e+11 |-+                                                         +-|   
+             |      A                                                      |   
+             | A A +     +      +     +     +     +     +      +     +     |   
+           0 +-------------------------------------------------------------+   
+             0   1e+18 2e+18  3e+18 4e+18 5e+18 6e+18 7e+18  8e+18 9e+18 1e+19 
+                                          value                                
+                                                                               
+psammon1@remote00:~/i220a/submit/lab5/exercises/8-ulp$ ./ulp lg-data >ulp-lg.data
+psammon1@remote00:~/i220a/submit/lab5/exercises/8-ulp$ ./ulp lg-data >ulp-lg.data[9Pgnuplot -p ulp.gp./ulp lg-data >ulp-lg.data[Kls
+Makefile  ulp  ulp.c  ulp.data	ulp.gp	ulp-lg.data  ulp-lg.gp
+psammon1@remote00:~/i220a/submit/lab5/exercises/8-ulp$ vim ulp-lg.gp
+[?1000h[?2004h[?1049h[22;0;0t[?1h=[?2004h[1;49r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[49;1H"ulp-lg.gp" 3L, 64C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1Hset xlabel [31m"lg(value)"[m
+set ylabel [31m"lg(ULP)"[m
+plot [31m"ulp-lg.data"[m
+[1m[34m~                                                                                            [5;1H~                                                                                            [6;1H~                                                                                            [7;1H~                                                                                            [8;1H~                                                                                            [9;1H~                                                                                            [10;1H~                                                                                            [11;1H~                                                                                            [12;1H~                                                                                            [13;1H~                                                                                            [14;1H~                                                                                            [15;1H~                                                                                            [16;1H~                                                                                            [17;1H~                                                                                            [18;1H~                                                                                            [19;1H~                                                                                            [20;1H~                                                                                            [21;1H~                                                                                            [22;1H~                                                                                            [23;1H~                                                                                            [24;1H~                                                                                            [25;1H~                                                                                            [26;1H~                                                                                            [27;1H~                                                                                            [28;1H~                                                                                            [29;1H~                                                                                            [30;1H~                                                                                            [31;1H~                                                                                            [32;1H~                                                                                            [33;1H~                                                                                            [34;1H~                                                                                            [35;1H~                                                                                            [36;1H~                                                                                            [37;1H~                                                                                            [38;1H~                                                                                            [39;1H~                                                                                            [40;1H~                                                                                            [41;1H~                                                                                            [42;1H~                                                                                            [43;1H~                                                                                            [44;1H~                                                                                            [45;1H~                                                                                            [46;1H~                                                                                            [47;1H~                                                                                            [48;1H~                                                                                            [m[49;76H1,1[11CAll[1;1H[?25h[?1000l[?1002h[?25l[49;66Hi[1;1H[49;66H [1;1H[49;1H[1m-- INSERT --[m[49;13H[K[49;76H1,1[11CAll[1;1H[?25h[?25l[2;48r[2;1H[L[1;49r[1;1H[K[2;1Hset xlabel [31m"lg(value)"[m[49;76H[K[49;76H2,1[11CAll[2;1H[?25h[?25l[49;76H1[1;1H[?25h[?25ls[49;78H2[1;2H[?25h[?25le[49;78H3[1;3H[?25h[?25lt[49;78H4[1;4H[?25h[?25l[49;78H5[1;5H[?25h[?25lt[49;78H6[1;6H[?25h[?25le[49;78H7[1;7H[?25h[?25lr[49;78H8[1;8H[?25h[?25lm[49;78H9[1;9H[?25h[?25li[49;78H10[1;10H[?25h[?25ln[49;79H1[1;11H[?25h[?25la[49;79H2[1;12H[?25h[?25ll[49;79H3[1;13H[?25h[?25l[49;79H4[1;14H[?25h[?25ld[49;79H5[1;15H[?25h[?25lu[49;79H6[1;16H[?25h[?25lm[49;79H7[1;17H[?25h[?25lb[49;79H8[1;18H[?25h[?25l;[49;79H9[1;19H[?25h[49;1H[K[1;18H[?25l[49;66H^[[1;18H[49;66H  [1;19H[49;76H1,18[10CAll[1;18H[?25h[?25l[49;66H:[1;18H[49;66H[K[49;1H:[?2004h[?25hw[?25l[?25hq[?25l[?25h[?25l[?1002l[?2004l"ulp-lg.gp" 4L, 83C written[23;2t[23;1t[22;2t[22;1t[23;2t[23;1t
+[?2004l[?1l>[?25h[?1049l[23;0;0tpsammon1@remote00:~/i220a/submit/lab5/exercises/8-ulp$ vim ulp-lg.gpls[K./ulp lg-data >ulp-lg.data
+psammon1@remote00:~/i220a/submit/lab5/exercises/8-ulp$ ./ulp lg-data >ulp-lg.data[13Pvim ulp-lg.gpls[K./ulp lg-data >ulp-lg.datals[Kvim ulp-lg.gp./ulp lg-data >ulp-lg.data[Kgnuplot -p ulp-lg.gp
+                                                                               
+         40 +--------------------------------------------------------------+   
+            |        +        +        +        +        +      AAAA       |   
+            |                                        "ulp-lg.AAAa"    A    |   
+         30 |-+                                           AAA            +-|   
+            |                                         AAAA                 |   
+         20 |-+                                    AAA                   +-|   
+            |                                   AAA                        |   
+            |                               AAAA                           |   
+         10 |-+                          AAAA                            +-|   
+            |                        AAAA                                  |   
+            |                      AA                                      |   
+          0 |-+                AAAA                                      +-|   
+            |              AAAA                                            |   
+            |            AA                                                |   
+        -10 |-+      AAAA                                                +-|   
+            |    AAAA                                                      |   
+        -20 |-+AAA                                                       +-|   
+            |AA                                                            |   
+            |        +        +        +        +        +        +        |   
+        -30 +--------------------------------------------------------------+   
+            0        10       20       30       40       50       60       70  
+                                       lg(value)                               
+                                                                               
+psammon1@remote00:~/i220a/submit/lab5/exercises/8-ulp$ cd ../9-loop/
+psammon1@remote00:~/i220a/submit/lab5/exercises/9-loop$ make
+cc -g -Wall -std=c11    loop.c   -o loop
+psammon1@remote00:~/i220a/submit/lab5/exercises/9-loop$ ./loop
+1000000
+loop exited with x = 1002000
+vim   ^C
+psammon1@remote00:~/i220a/submit/lab5/exercises/9-loop$ vim loop.c
+[?1000h[?2004h[?1049h[22;0;0t[?1h=[?2004h[1;49r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[49;1H"loop.c" 14L, 217C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1H[35m#include [m[31m<stdio.h>[m
+
+[32mint[m main() {
+
+  [33mwhile[m ([31m1[m) {
+    [32mfloat[m d;
+    scanf([31m"[m[35m%f[m[31m"[m, &d);
+    [32mfloat[m x;
+    [33mfor[m (x = d; x <= d + [31m1000.0[m; x = x + [31m1000.0[m) {
+    }
+    printf([31m"loop exited with x = [m[35m%.14g\n[m[31m"[m, x);
+  }
+  [33mreturn[m [31m0[m;
+}
+[1m[34m~                                                                                            [16;1H~                                                                                            [17;1H~                                                                                            [18;1H~                                                                                            [19;1H~                                                                                            [20;1H~                                                                                            [21;1H~                                                                                            [22;1H~                                                                                            [23;1H~                                                                                            [24;1H~                                                                                            [25;1H~                                                                                            [26;1H~                                                                                            [27;1H~                                                                                            [28;1H~                                                                                            [29;1H~                                                                                            [30;1H~                                                                                            [31;1H~                                                                                            [32;1H~                                                                                            [33;1H~                                                                                            [34;1H~                                                                                            [35;1H~                                                                                            [36;1H~                                                                                            [37;1H~                                                                                            [38;1H~                                                                                            [39;1H~                                                                                            [40;1H~                                                                                            [41;1H~                                                                                            [42;1H~                                                                                            [43;1H~                                                                                            [44;1H~                                                                                            [45;1H~                                                                                            [46;1H~                                                                                            [47;1H~                                                                                            [48;1H~                                                                                            [m[49;76H1,1[11CAll[1;1H[?25h[?1000l[?1002h[?25l[49;66H~@k[1;1H[49;66H   [1;1H[?25h[?25l[49;66H:[1;1H[49;1H[K[49;1H:[?2004h[?25hw[?25l[?25hq[?25l[?25h[?25l[?1002l[?2004l"loop.c" 14L, 217C written[23;2t[23;1t[22;2t[22;1t[23;2t[23;1t
+[?2004l[?1l>[?25h[?1049l[23;0;0tpsammon1@remote00:~/i220a/submit/lab5/exercises/9-loop$ vim loop.c[4P./loop
+1000000 1000001
+loop exited with x = 1002000
+loop exited with x = 1002001
+10000000 10000001
+loop exited with x = 10002000
+loop exited with x = 10002001
+^C
+psammon1@remote00:~/i220a/submit/lab5/exercises/9-loop$ ./loopvim loop.c
+[?1000h[?2004h[?1049h[22;0;0t[?1h=[?2004h[1;49r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[49;1H"loop.c" 14L, 217C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1H[35m#include [m[31m<stdio.h>[m
+
+[32mint[m main() {
+
+  [33mwhile[m ([31m1[m) {
+    [32mfloat[m d;
+    scanf([31m"[m[35m%f[m[31m"[m, &d);
+    [32mfloat[m x;
+    [33mfor[m (x = d; x <= d + [31m1000.0[m; x = x + [31m1000.0[m) {
+    }
+    printf([31m"loop exited with x = [m[35m%.14g\n[m[31m"[m, x);
+  }
+  [33mreturn[m [31m0[m;
+}
+[1m[34m~                                                                                            [16;1H~                                                                                            [17;1H~                                                                                            [18;1H~                                                                                            [19;1H~                                                                                            [20;1H~                                                                                            [21;1H~                                                                                            [22;1H~                                                                                            [23;1H~                                                                                            [24;1H~                                                                                            [25;1H~                                                                                            [26;1H~                                                                                            [27;1H~                                                                                            [28;1H~                                                                                            [29;1H~                                                                                            [30;1H~                                                                                            [31;1H~                                                                                            [32;1H~                                                                                            [33;1H~                                                                                            [34;1H~                                                                                            [35;1H~                                                                                            [36;1H~                                                                                            [37;1H~                                                                                            [38;1H~                                                                                            [39;1H~                                                                                            [40;1H~                                                                                            [41;1H~                                                                                            [42;1H~                                                                                            [43;1H~                                                                                            [44;1H~                                                                                            [45;1H~                                                                                            [46;1H~                                                                                            [47;1H~                                                                                            [48;1H~                                                                                            [m[49;76H1,1[11CAll[1;1H[?25h[?1000l[?1002h[?25l[3;12H[46m{[14;1H}[m[49;77H4,1[14;1H[?25h[?25l[49;66H:[14;1H[49;1H[K[49;1H:[?2004h[?25hw[?25l[?25hq[?25l[?25h[?25l[?1002l[?2004l"loop.c" 14L, 217C written[23;2t[23;1t[22;2t[22;1t[23;2t[23;1t
+[?2004l[?1l>[?25h[?1049l[23;0;0tpsammon1@remote00:~/i220a/submit/lab5/exercises/9-loop$ 16777216[K[K[K[K[K[K[K[Kvim loop.c[4P./loop
+^[[A    16777216
+loop exited with x = 16779216
+; ^C
+psammon1@remote00:~/i220a/submit/lab5/exercises/9-loop$ ./loopvim loop.c
+[?1000h[?2004h[?1049h[22;0;0t[?1h=[?2004h[1;49r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[49;1H"loop.c" 14L, 217C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1H[35m#include [m[31m<stdio.h>[m
+
+[32mint[m main() [46m{[m
+
+  [33mwhile[m ([31m1[m) {
+    [32mfloat[m d;
+    scanf([31m"[m[35m%f[m[31m"[m, &d);
+    [32mfloat[m x;
+    [33mfor[m (x = d; x <= d + [31m1000.0[m; x = x + [31m1000.0[m) {
+    }
+    printf([31m"loop exited with x = [m[35m%.14g\n[m[31m"[m, x);
+  }
+  [33mreturn[m [31m0[m;
+[46m}[m
+[1m[34m~                                                                                            [16;1H~                                                                                            [17;1H~                                                                                            [18;1H~                                                                                            [19;1H~                                                                                            [20;1H~                                                                                            [21;1H~                                                                                            [22;1H~                                                                                            [23;1H~                                                                                            [24;1H~                                                                                            [25;1H~                                                                                            [26;1H~                                                                                            [27;1H~                                                                                            [28;1H~                                                                                            [29;1H~                                                                                            [30;1H~                                                                                            [31;1H~                                                                                            [32;1H~                                                                                            [33;1H~                                                                                            [34;1H~                                                                                            [35;1H~                                                                                            [36;1H~                                                                                            [37;1H~                                                                                            [38;1H~                                                                                            [39;1H~                                                                                            [40;1H~                                                                                            [41;1H~                                                                                            [42;1H~                                                                                            [43;1H~                                                                                            [44;1H~                                                                                            [45;1H~                                                                                            [46;1H~                                                                                            [47;1H~                                                                                            [48;1H~                                                                                            [m[49;76H14,1[10CAll[14;1H[?25h[?1000l[?1002h[?25l[49;66H:[14;1H[49;1H[K[49;1H:[?2004h[?25hw[?25l[?25hq[?25l[?25h[?25l[?1002l[?2004l"loop.c" 14L, 217C written[23;2t[23;1t[22;2t[22;1t[23;2t[23;1t
+[?2004l[?1l>[?25h[?1049l[23;0;0tpsammon1@remote00:~/i220a/submit/lab5/exercises/9-loop$ vim loop.c[4P./loop
+1.75922e+13
+^C
+psammon1@remote00:~/i220a/submit/lab5/exercises/9-loop$ exit
+
+Script done on 2020-09-30 21:40:03-04:00 [COMMAND_EXIT_CODE="130"]
