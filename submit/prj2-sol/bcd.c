@@ -101,25 +101,27 @@ str_to_bcd(const char *s, const char **p, BcdError *error)
 {
  // printf("bcd: %s\n", s);
 
-  int bcdDigits = strlen(s);
+/*  int bcdDigits = strlen(s);
   if(error != NULL && bcdDigits > MAX_BCD_DIGITS)
 	  *error = OVERFLOW_ERR;
 
   Bcd bcd = 0;
-  int digitIndex = 1;
+//  int digitIndex = 1;
  // while(*s != '\0')
   for(int i = 0; i < bcdDigits; i++)
   {
 	if(error != NULL && !(isdigit(s[i]))){
 		*p = &s[i];
 		*error = BAD_VALUE_ERR;
-		break;
 	}
 	long d = (long)s[i] - '0';
-	bcd = set_bcd_digit(bcd, digitIndex, d);
-	digitIndex++;
-  }
-  return bcd;
+	bcd = bcd << 4;
+	bcd |= d;
+//	bcd = set_bcd_digit(bcd, digitIndex, d);
+//	digitIndex++;
+*/  
+//  return bcd;
+	return binary_to_bcd(strtoull(s, (char **)p, 10), error);
 }
 
 /** Convert bcd to a NUL-terminated string in buf[] without any
