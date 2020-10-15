@@ -5,6 +5,8 @@
 #include <limits.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
 
 /** Return BCD encoding of binary (which has normal binary representation).
  *
@@ -19,17 +21,14 @@
 Binary
 get_bcd_digit(Bcd bcd, int digitIndex)
 {
-//	unsigned long temp = 0xf <<(4*(digitIndex-1));
-//	temp &= bcd;
-//	return temp >>(4*(digitIndex-1));
-	return ((bcd>>(BCD_BITS*(digitIndex-1)))&0xf);
+	return ((bcd>>(4*(digitIndex-1)))&0xf);
 }
 
 Bcd
 set_bcd_digit(Bcd bcd, int digitIndex, Binary digit)
 {
-	bcd &= (~(0xf << ((digitIndex-1)*BCD_BITS)));
-	bcd |= (digit << ((digitIndex-1)*BCD_BITS));
+	bcd &= (~(0x00f << ((digitIndex-1)*4)));
+	bcd |= (digit << ((digitIndex-1)*4));
 	return bcd;
 }
 Bcd
@@ -68,21 +67,24 @@ binary_to_bcd(Binary value, BcdError *error)
 Binary
 bcd_to_binary(Bcd bcd, BcdError *error)
 {
-	Binary num = 0x0;
-	int nybbles = (((int)log2(bcd)+1)/4);
-	printf("nybbles: %d\n", nybbles);
-	for(int i = nybbles; i >= 1; i--)
+	Binary num = 0;
+	Binary temp = bcd;
+	int bcdDigits = 0;
+	while(temp != 0)
+	{
+		temp /= 16;
+		bcdDigits++;
+	}
+	for(int i = bcdDigits; i >= 1; i--)
 	{
 		Binary digit = get_bcd_digit(bcd, i);
-		printf("get_digit: %d\n", digit);
-		if(digit >= 10)
+		if(error != NULL && digit > 9){
 			*error = BAD_VALUE_ERR;
+		}
 		num *= 10;
 		num += digit;
-//		printf("%x\n", num);
 
 	}
-	printf("result: %d\n", num);
   	return num;
 }
 
@@ -97,22 +99,29 @@ bcd_to_binary(Bcd bcd, BcdError *error)
 Bcd
 str_to_bcd(const char *s, const char **p, BcdError *error)
 {
-  int nybbles = 0;
-  while(s[nybbles] != '\0') nybbles++;
-  if(error != NULL)
-  {
-	  if(nybbles > MAX_BCD_DIGITS)
-		  *error = OVERFLOW_ERR;
-  }
-  *p = s+1;
+ // printf("bcd: %s\n", s);
+
+  int bcdDigits = strlen(s);
+  if(error != NULL && bcdDigits > MAX_BCD_DIGITS)
+	  *error = OVERFLOW_ERR;
+
 
   Bcd bcd = 0;
-  for(int i = 0; *s != '\0'; s++)
+  int digitIndex = 1;
+
+  while(*s != '\0')
   {
-	long temp = (long)(s - '0');
-	bcd |= ((temp & 0xf) << (i*BCD_BITS));
-	i++;
+//	long temp = (long)(s - '0');
+	if(error != NULL && !(isdigit(s))){
+		*error = BAD_VALUE_ERR;
+	}
+	long d = (long)s - '0';
+	bcd = set_bcd_digit(bcd, digitIndex, d);
+//	bcd |= ((temp & 0xf) << (i*BCD_BITS));
+	digitIndex++;
+	s++;
   }
+ // *p = s;
   return bcd;
 }
 
@@ -130,16 +139,24 @@ bcd_to_str(Bcd bcd, char buf[], size_t bufSize, BcdError *error)
 {
   if(bufSize >= BCD_BUF_SIZE)
 	  *error = OVERFLOW_ERR;
-  int nybbles = (((int)log2(bcd)+1)/4);
 
-  for(int i = nybbles; i >= 1; i--)
+  Binary temp = bcd;
+  int bcdDigits = 0;
+  while(temp != 0)
   {
-	if(get_bcd_digit(bcd, i) >= 10)
+	temp /= 16;
+	bcdDigits++;
+  }
+
+  for(int i = 1; i >= bcdDigits; i++)
+  {
+	if(error != NULL && (get_bcd_digit(bcd, i) > 9)){
 		*error = BAD_VALUE_ERR;
+	}
   }
   snprintf(buf, bufSize, "%x", (int)bcd);
 
-  return nybbles;
+  return bcdDigits;
 }
 
 /** Return the BCD representation of the sum of BCD int's x and y.
@@ -151,47 +168,62 @@ bcd_to_str(Bcd bcd, char buf[], size_t bufSize, BcdError *error)
 Bcd
 bcd_add(Bcd x, Bcd y, BcdError *error)
 {
-  int nybbles = (((int)log2(x)+1)/4);
+  Binary temp = x;
+  int bcdDigits = 0;
+  while(temp != 0)
+  {
+	temp /= 16;
+	bcdDigits++;
+  }
+  if(error != NULL && bcdDigits > MAX_BCD_DIGITS)
+	  *error = OVERFLOW_ERR;
+
   Bcd bcd = 0;
   int carry = 0;
-  for(int i = 1; i <= nybbles; i++)
+  for(int i = 1; i <= bcdDigits; i++)
   {
 	  int xDig = get_bcd_digit(x, i);
 	  int yDig = get_bcd_digit(y, i);
-	  if(error != NULL)
-		  if(xDig > 9 || yDig > 9){
+	  if(error != NULL &&(xDig > 9 || yDig > 9))
 			  *error = BAD_VALUE_ERR;
-		  }
+
 	  int sum = xDig + yDig + carry;
 	  Binary temp = sum%10;
 	  bcd = set_bcd_digit(bcd, i, temp);
 	  carry = sum / 10;
   }
-  if(nybbles > MAX_BCD_DIGITS || (nybbles == MAX_BCD_DIGITS && carry > 0))
+  if(error != NULL && bcdDigits == (MAX_BCD_DIGITS && carry > 0))
 	  *error = OVERFLOW_ERR;
   
   return bcd;
 }
 
 static Bcd
-bcd_multipy_digit(Bcd multiplicand, unsigned bcdDigit, BcdError *error)
+bcd_multiply_digit(Bcd multiplicand, unsigned bcdDigit, BcdError *error)
 {
-	int nybbles = (((int)log2(bcd)+1)/4);
+	Binary temp = multiplicand;
+  	int bcdDigits = 0;
+  	while(temp != 0)
+  	{
+		temp /= 16;
+		bcdDigits++;
+ 	 }
+
 
 	int carry = 0;
-	for(int i = 1; i <= nybbles; i++)
+	for(int i = 1; i <= bcdDigits; i++)
 	{
-		int dig = get_bcd_digit(x, i);
-		if(error != NULL)
-		  if(dig > 9){
+		int dig = get_bcd_digit(multiplicand, i);
+		if(error != NULL && dig > 9)
 			  *error = BAD_VALUE_ERR;
-		  }
+
 		dig *= pow(10, i-1); 
 		int product = dig * bcdDigit + carry;
-		bcd = set_bcd_digit(bcd, i, product%10)
+		multiplicand = set_bcd_digit(multiplicand, i, product%10);
 		carry = product/10;
 	}
-	return bcd;
+
+	return multiplicand;
 }
 
 /** Return the BCD representation of the product of BCD int's x and y.
@@ -203,15 +235,29 @@ bcd_multipy_digit(Bcd multiplicand, unsigned bcdDigit, BcdError *error)
 Bcd
 bcd_multiply(Bcd x, Bcd y, BcdError *error)
 {
-	int nybbles = (((int)log2(y)+1)/4);
-	Bcd sum = 0;
+	Binary temp = x;
+  	int xDigits = 0;
+  	while(temp != 0)
+  	{
+		temp /= 16;
+		xDigits++;
+ 	}
 
-	for(int i = 1; i <= nybbles; i++)
+	temp = y;
+  	int yDigits = 0;
+  	while(temp != 0)
+  	{
+		temp /= 16;
+		yDigits++;
+ 	}
+
+	Bcd sum = 0;
+	for(int i = 1; i <= xDigits; i++)
 	{
 		int digY = get_bcd_digit(y, i);
-		Bcd product = bcd_multiply_digit(x, digY, *error);
-		product = product << ((i-1)*4);
-		sum = bcd_add(product, sum);
+		Bcd product = bcd_multiply_digit(x, digY, error);
+		product *= ((i-1)*16);
+		sum = bcd_add(product, sum, error);
 	}
 
   return sum;
