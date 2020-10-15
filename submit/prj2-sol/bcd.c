@@ -105,23 +105,20 @@ str_to_bcd(const char *s, const char **p, BcdError *error)
   if(error != NULL && bcdDigits > MAX_BCD_DIGITS)
 	  *error = OVERFLOW_ERR;
 
-
   Bcd bcd = 0;
   int digitIndex = 1;
-
-  while(*s != '\0')
+ // while(*s != '\0')
+  for(int i = 0; i < bcdDigits; i++)
   {
-//	long temp = (long)(s - '0');
-	if(error != NULL && !(isdigit(s))){
+	if(error != NULL && !(isdigit(s[i]))){
+		*p = &s[i];
 		*error = BAD_VALUE_ERR;
+		break;
 	}
-	long d = (long)s - '0';
+	long d = (long)s[i] - '0';
 	bcd = set_bcd_digit(bcd, digitIndex, d);
-//	bcd |= ((temp & 0xf) << (i*BCD_BITS));
 	digitIndex++;
-	s++;
   }
- // *p = s;
   return bcd;
 }
 
