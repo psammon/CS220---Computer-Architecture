@@ -5,7 +5,8 @@
 get_cpuid:
 	pushq   %rcx
 	pushq   %rdx
-	xorl 	%eax, %eax	#setup cpuid opcode to 0
+	pushq	%rbx
+	xorl 	%eax. %eax
 	cpuid
 	#largest param in %eax
 	#12-char manufacturer string in ebx, edx, ecx.
@@ -16,4 +17,3 @@ get_cpuid:
 	popq    %rax		#pop address for ecxP
 	movl	%ecx, (%rax)	#store ecx cpuid result
 	ret
-	
