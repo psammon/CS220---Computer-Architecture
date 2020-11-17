@@ -66,7 +66,11 @@ isLt0(Word word) {
 static void
 set_add_arith_cc(Y86 *y86, Word opA, Word opB, Word result)
 {
-  //@TODO
+//  Word tmp = opA + opB;
+ // if(tmp == 0);
+  	
+//  result == opA + opB;
+
 }
 
 /** Set condition codes for subtraction operation with operands opA, opB
@@ -108,4 +112,22 @@ void
 step_ysim(Y86 *y86)
 {
   //@TODO
+	Address pc = read_pc_y86(y86);
+	Byte opcode = read_memory_byte_y86(y86, pc);
+	if(read_status_y86(y86) != STATUS_AOK) return;
+
+	Condition baseCode = get_nybble(opcode, 1);
+	switch(baseCode){
+
+	default: {
+	    write_status_y86(y86, STATUS_INS);
+	}
+
+
+
+
+
+
+
+
 }
