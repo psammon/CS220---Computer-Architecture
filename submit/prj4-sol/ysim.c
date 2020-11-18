@@ -116,13 +116,51 @@ step_ysim(Y86 *y86)
 	Byte opcode = read_memory_byte_y86(y86, pc);
 	if(read_status_y86(y86) != STATUS_AOK) return;
 
-	Condition baseCode = get_nybble(opcode, 1);
+	BaseOpCode baseCode = get_nybble(opcode, 1);
 	switch(baseCode){
+	case HALT_CODE: 
+	    write_status_y86(y86, STATUS_HLT);
+	    break;
+	case NOP_CODE: //nop
+	    write_pc_y86(y86, pc+sizeof(Byte));
+	    break;
+	case IRMOVQ_CODE: //irmovq
+	    Byte nextByte = read_memory_byte(pc+sizeof(Byte));
+	    if(read_status_y86(y86) != STATUS_AOK) return;
+	    Byte reg = get_nybble(nextByte, 0);
 
+	    Word imm = read_memory_word_y86(y86, pc+(2*sizeof(Byte)));
+	    if(read_status_y86(y86) != STATUS_AOK) return;
+
+	    write_register_y86(y86, reg, imm);
+
+	    write_pc_y86(y86, pc+(1 + sizeof(Byte) + sizeof(Word);
+	    break;
+	case CALL_CODE:
+	    Address callAddress = read_memory_word_y86(y86, pc + sizeOf(Byte));
+	    Address returnAddress = pc + sizeof(Byte) + sizeof(Word);
+
+	    Address *p = mallocChk(sizeof(word);
+	    p = returnAddress;
+
+
+
+
+
+
+
+
+
+	    
+	    
+
+
+
+	    
 	default: {
 	    write_status_y86(y86, STATUS_INS);
+	    }
 	}
-
 
 
 
