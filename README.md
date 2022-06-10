@@ -1,2 +1,1 @@
-# i220a
-CS220A repository
+# CS220 repository
